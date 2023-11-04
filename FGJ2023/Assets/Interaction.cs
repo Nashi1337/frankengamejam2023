@@ -10,7 +10,6 @@ public class Interaction : MonoBehaviour, IInteractable
     GameObject SpeechBubble;
     [SerializeField]
     Sprite newSprite;
-
     [SerializeField]
     private Inventory _inventory;
 
@@ -28,14 +27,14 @@ public class Interaction : MonoBehaviour, IInteractable
         {
             spriteRenderers[i].sprite = newSprite;
         }
-        SpeechBubble.SetActive(false);
+        toggleInteractivity();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            SpeechBubble.SetActive(true);
+            toggleInteractivity();
         }
     }
 
@@ -43,7 +42,7 @@ public class Interaction : MonoBehaviour, IInteractable
     {
         if (collision.tag == "Player")
         {
-            SpeechBubble.SetActive(false);
+            toggleInteractivity();
         }
     }
 
@@ -62,3 +61,8 @@ public class Interaction : MonoBehaviour, IInteractable
         Destroy(gameObject);
     }
 }
+
+    public void toggleInteractivity()
+    {
+        SpeechBubble.SetActive(!SpeechBubble.activeSelf); ;
+    }
