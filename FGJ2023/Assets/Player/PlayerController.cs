@@ -14,15 +14,19 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementInput;
 
     private IInteractable _interactable = null;
+    private Animator animator;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
         rigidbody.velocity = movementInput * speed;
+        animator.SetFloat("movementX", movementInput.x);
+        animator.SetFloat("movementY", movementInput.y);
     }
 
     private void OnMove(InputValue inputValue)
