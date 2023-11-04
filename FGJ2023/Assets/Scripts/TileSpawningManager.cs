@@ -113,6 +113,8 @@ public class TileSpawningManager : MonoBehaviour
             transform
             );
         instantiatedTile.name = $"{temporaryTile.name}-{position}";
+        TileManager tileManager = instantiatedTile.GetComponent<TileManager>();
+        tileManager.SetUp(position);
         _history.Add(temporaryTile);
         _map.Add(position, temporaryTile);
 

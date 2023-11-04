@@ -5,6 +5,27 @@ using UnityEngine;
 public class TileManager : MonoBehaviour
 {
     public LayerMask layerMask;
+
+    /// <summary>
+    /// Array that holds all possible spawnpoints for Points of Interest (POI)
+    /// </summary>
+    [SerializeField]
+    private GameObject[] _poiSpawns;
+
+    /// <summary>
+    /// Array that holds all possible spawnpoints for decoration
+    /// </summary>
+    [SerializeField]
+    private GameObject[] _decorationSpawns;
+
+    [SerializeField]
+    private Vector2Int _position;
+
+    public void SetUp(Vector2Int position)
+    {
+        _position = position;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
