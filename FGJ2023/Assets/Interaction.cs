@@ -12,7 +12,8 @@ public class Interaction : MonoBehaviour, IInteractable
     Sprite newSprite;
     [SerializeField]
     private Inventory _inventory;
-
+    [SerializeField]
+    bool give;
     //0=berry
     [SerializeField]
     public int type;
@@ -52,7 +53,10 @@ public class Interaction : MonoBehaviour, IInteractable
         switch(type)
         {
             case 0:
-                _inventory.BerryAmount += amount;
+                if(give)
+                    _inventory.BerryAmount += amount;
+                else
+                    _inventory.BerryAmount -= amount;
                 break;
             default:
                 break;
