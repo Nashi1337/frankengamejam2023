@@ -29,9 +29,12 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidbody.velocity = movementInput * (isWalking ? walkSpeed : sprintSpeed);
-        animator.SetFloat("movementX", movementInput.x);
-        animator.SetFloat("movementY", movementInput.y);
+        float speed = (isWalking ? walkSpeed : sprintSpeed);
+        rigidbody.velocity = movementInput * speed;
+        bool vertical = !Mathf.Approximately(movementInput.y, 0f);
+        float animationSpeed = speed / walkSpeed;
+        animator.SetFloat("movementX", vertical ? 0f : movementInput.x * animationSpeed);
+        animator.SetFloat("movementY", movementInput.y * animationSpeed);
     }
 
     private void OnMove(InputValue inputValue)
