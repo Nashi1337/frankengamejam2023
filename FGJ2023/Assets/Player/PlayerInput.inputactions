@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Walk",
+                    "type": "Value",
+                    "id": "b4240198-a9bf-41a9-98fe-4fac5fcb74c3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Action",
                     "type": "Button",
                     "id": "da046f18-6e4c-4285-b0a6-59e5bf9bca40",
@@ -110,6 +119,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a48bcc3-71bc-4680-b252-9b4b65b592a1",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Walk",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

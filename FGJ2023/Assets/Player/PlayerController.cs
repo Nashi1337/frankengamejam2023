@@ -4,14 +4,18 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float speed = 5f;
+    private float walkSpeed = 10f;
+    [SerializeField]
+    private float sprintSpeed = 20f;
 
     private Rigidbody2D rigidbody;
     private Vector2 movementInput;
+    private bool isWalking;
 
     private IInteractable _interactable = null;
     private Animator animator;
@@ -24,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidbody.velocity = movementInput * speed;
+        rigidbody.velocity = movementInput * (isWalking ? walkSpeed : sprintSpeed);
         animator.SetFloat("movementX", movementInput.x);
         animator.SetFloat("movementY", movementInput.y);
     }
@@ -32,6 +36,11 @@ public class PlayerController : MonoBehaviour
     private void OnMove(InputValue inputValue)
     {
         movementInput = inputValue.Get<Vector2>();
+    }
+
+    private void OnWalk(InputValue inputValue)
+    {
+        isWalking = inputValue.isPressed;
     }
 
     private void OnAction(InputValue inputValue)
