@@ -13,6 +13,8 @@ public class Inventory : ScriptableObject
     private int _stoneAmount;
     [SerializeField]
     private int _fishAmount;
+    [SerializeField]
+    private int _tileTokenAmount;
 
     public delegate void OnValueChangedHandler();
     public OnValueChangedHandler OnValueChanged;
@@ -58,6 +60,7 @@ public class Inventory : ScriptableObject
             OnValueChanged?.Invoke();
         }
     }
+
     public int FishAmount
     {
         get
@@ -71,6 +74,19 @@ public class Inventory : ScriptableObject
             OnValueChanged?.Invoke();
         }
     }
+    public int TileTokenAmount
+    {
+        get
+        {
+            return _tileTokenAmount;
+        }
+
+        set
+        {
+            _tileTokenAmount = value;
+            OnValueChanged?.Invoke();
+        }
+    }
 
     public void ResetInventory()
     {
@@ -78,6 +94,7 @@ public class Inventory : ScriptableObject
         _woodAmount = 0;
         _stoneAmount = 0;
         _fishAmount = 0;
+        _tileTokenAmount = 0;
         OnValueChanged?.Invoke();
     }
 }

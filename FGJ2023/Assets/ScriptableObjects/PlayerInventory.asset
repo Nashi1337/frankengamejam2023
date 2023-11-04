@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa5bd1415041af4ead1f35616845c25, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  BerryAmount: 0
-  WoodAmount: 0
-  StoneAmount: 0
-  FishAmount: 0
+  _berryAmount: 0
+  _woodAmount: 0
+  _stoneAmount: 0
+  _fishAmount: 0
+  _tileTokenAmount: 4
