@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5c0ffd8467e5bb4a8b897ab6696c0d5
+guid: 70e67bacc9d4800499865eb055d278a9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dino1_0
+      name: TreesAndOneStone_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 17
-        width: 421
-        height: 572
+        x: 157
+        y: 1711
+        width: 1130
+        height: 1460
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a53fd22cdf6890345a9def56b4037ee3
-      internalID: -1013570427
+      spriteID: 8677ad51fd230c2469d19ee73729f9a8
+      internalID: -2071282582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_1
+      name: TreesAndOneStone_1
       rect:
         serializedVersion: 2
-        x: 541
-        y: 17
-        width: 421
-        height: 572
+        x: 1511
+        y: 1676
+        width: 1081
+        height: 1684
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22853034c19f23f48bf88b2b8797f79f
-      internalID: 963509670
+      spriteID: 716b74116c8a51a4dba87464b5c88ea8
+      internalID: 255088511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_2
+      name: TreesAndOneStone_2
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 17
-        width: 405
-        height: 582
+        x: 2797
+        y: 1616
+        width: 1774
+        height: 1734
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1502301cde0e09c498000a0f7e6efb0e
-      internalID: 1831878786
+      spriteID: 85ca4ec550173d94fa2778079b48219e
+      internalID: 449753671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TreesAndOneStone_3
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 162
+        width: 1156
+        height: 1181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bad05a3560a064c9e620db8dc36c21
+      internalID: 977660307
       vertices: []
       indices: 
       edges: []
@@ -183,9 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dino1_0: -1013570427
-      Dino1_1: 963509670
-      Dino1_2: 1831878786
+      TreesAndOneStone_0: -2071282582
+      TreesAndOneStone_1: 255088511
+      TreesAndOneStone_2: 449753671
+      TreesAndOneStone_3: 977660307
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

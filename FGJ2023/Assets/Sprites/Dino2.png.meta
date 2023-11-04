@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5c0ffd8467e5bb4a8b897ab6696c0d5
+guid: 4d75438e6f7c37f4a8838b004d20cae7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 800
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dino1_0
+      name: Dino2_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 17
-        width: 421
-        height: 572
+        x: 42
+        y: 707
+        width: 799
+        height: 429
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a53fd22cdf6890345a9def56b4037ee3
-      internalID: -1013570427
+      spriteID: 8eda1c2e31f424446a7f14b80580a99e
+      internalID: -1810408139
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_1
+      name: Dino2_1
       rect:
         serializedVersion: 2
-        x: 541
-        y: 17
-        width: 421
-        height: 572
+        x: 915
+        y: 699
+        width: 787
+        height: 436
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22853034c19f23f48bf88b2b8797f79f
-      internalID: 963509670
+      spriteID: 0bde2d7140d515f418e23f83dc528b20
+      internalID: -234649876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_2
+      name: Dino2_2
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 17
-        width: 405
-        height: 582
+        x: 42
+        y: 209
+        width: 787
+        height: 436
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1502301cde0e09c498000a0f7e6efb0e
-      internalID: 1831878786
+      spriteID: c35baba8ffa3e964cad8474074f5b105
+      internalID: 1008190712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dino2_3
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 218
+        width: 791
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4c3e0f2232e4949847ff2a0d0b48a7
+      internalID: -2062638730
       vertices: []
       indices: 
       edges: []
@@ -183,9 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dino1_0: -1013570427
-      Dino1_1: 963509670
-      Dino1_2: 1831878786
+      Dino2_0: -1810408139
+      Dino2_1: -234649876
+      Dino2_2: 1008190712
+      Dino2_3: -2062638730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

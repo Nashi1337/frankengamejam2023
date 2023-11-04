@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5c0ffd8467e5bb4a8b897ab6696c0d5
+guid: 4d8e2ef756c5f1f43871897d4a0ae5df
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dino1_0
+      name: BerryBush_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 17
-        width: 421
-        height: 572
+        x: 19
+        y: 14
+        width: 523
+        height: 482
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a53fd22cdf6890345a9def56b4037ee3
-      internalID: -1013570427
+      spriteID: adf95f614c2ac0945b60e3590c3d221a
+      internalID: 1510757935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_1
+      name: BerryBush_1
       rect:
         serializedVersion: 2
-        x: 541
-        y: 17
-        width: 421
-        height: 572
+        x: 602
+        y: 9
+        width: 523
+        height: 482
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22853034c19f23f48bf88b2b8797f79f
-      internalID: 963509670
+      spriteID: 34d24dfad2090a847a7d3000aa6c8d0d
+      internalID: 139288459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_2
+      name: BerryBush_2
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 17
-        width: 405
-        height: 582
+        x: 1183
+        y: 304
+        width: 130
+        height: 139
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1502301cde0e09c498000a0f7e6efb0e
-      internalID: 1831878786
+      spriteID: e159641621863134ea3b55489428ad11
+      internalID: 119753323
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dino1_0: -1013570427
-      Dino1_1: 963509670
-      Dino1_2: 1831878786
+      BerryBush_0: 1510757935
+      BerryBush_1: 139288459
+      BerryBush_2: 119753323
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

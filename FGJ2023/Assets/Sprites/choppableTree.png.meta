@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5c0ffd8467e5bb4a8b897ab6696c0d5
+guid: 318a1599d76426d43b01236b42686ea0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dino1_0
+      name: choppableTree_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 17
-        width: 421
-        height: 572
+        x: 97
+        y: 19
+        width: 1456
+        height: 2558
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a53fd22cdf6890345a9def56b4037ee3
-      internalID: -1013570427
+      spriteID: 9447fb48ac6c16046ac5d83236396f17
+      internalID: -2054618318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_1
+      name: choppableTree_1
       rect:
         serializedVersion: 2
-        x: 541
-        y: 17
-        width: 421
-        height: 572
+        x: 1658
+        y: 19
+        width: 1456
+        height: 2558
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22853034c19f23f48bf88b2b8797f79f
-      internalID: 963509670
+      spriteID: d0a4904cf1d2e1e458f921131872e691
+      internalID: -947739650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_2
+      name: choppableTree_2
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 17
-        width: 405
-        height: 582
+        x: 3564
+        y: 0
+        width: 1038
+        height: 542
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1502301cde0e09c498000a0f7e6efb0e
-      internalID: 1831878786
+      spriteID: 0a0cf5935e8d9994fbbec554b519dd73
+      internalID: 1415545725
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dino1_0: -1013570427
-      Dino1_1: 963509670
-      Dino1_2: 1831878786
+      choppableTree_0: -2054618318
+      choppableTree_1: -947739650
+      choppableTree_2: 1415545725
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

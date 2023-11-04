@@ -9,7 +9,9 @@ public class Interaction : MonoBehaviour, IInteractable
     [SerializeField]
     GameObject SpeechBubble;
     [SerializeField]
-    Sprite newSprite;
+    Sprite itemSprite;
+    [SerializeField]
+    Sprite usedSprite;
     [SerializeField]
     private Inventory _inventory;
     [SerializeField]
@@ -26,7 +28,7 @@ public class Interaction : MonoBehaviour, IInteractable
         SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
         for(int i = 2; i < amount+2; i++)
         {
-            spriteRenderers[i].sprite = newSprite;
+            spriteRenderers[i].sprite = itemSprite;
         }
         ToggleInteractivity();
     }
@@ -61,12 +63,21 @@ public class Interaction : MonoBehaviour, IInteractable
             default:
                 break;
         }
-
-        Destroy(gameObject);
+        if (give)
+            ReplaceSprite();
+        else
+            Destroy(gameObject);
     }
 
     public void ToggleInteractivity()
     {
         SpeechBubble.SetActive(!SpeechBubble.activeSelf);
+    }
+
+    public void ReplaceSprite()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = usedSprite;
+        ToggleInteractivity();
+        Destroy(this);
     }
 }

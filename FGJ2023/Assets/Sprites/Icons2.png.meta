@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a5c0ffd8467e5bb4a8b897ab6696c0d5
+guid: 3842cf93cdea7404d8d86b610883c34e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dino1_0
+      name: Icons2_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 17
-        width: 421
-        height: 572
+        x: 25
+        y: 15
+        width: 64
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a53fd22cdf6890345a9def56b4037ee3
-      internalID: -1013570427
+      spriteID: 645c7235aff1e6c4181e0f7cb066c23c
+      internalID: 99970730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_1
+      name: Icons2_1
       rect:
         serializedVersion: 2
-        x: 541
-        y: 17
-        width: 421
-        height: 572
+        x: 124
+        y: 8
+        width: 109
+        height: 95
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22853034c19f23f48bf88b2b8797f79f
-      internalID: 963509670
+      spriteID: 6c54c057ad680ba42bb04c2d208b7ea4
+      internalID: -562560004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dino1_2
+      name: Icons2_2
       rect:
         serializedVersion: 2
-        x: 1043
-        y: 17
-        width: 405
-        height: 582
+        x: 281
+        y: 7
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1502301cde0e09c498000a0f7e6efb0e
-      internalID: 1831878786
+      spriteID: bdf433e5409b66543846e8777e4a7915
+      internalID: -1831123765
       vertices: []
       indices: 
       edges: []
@@ -183,9 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dino1_0: -1013570427
-      Dino1_1: 963509670
-      Dino1_2: 1831878786
+      Icons2_0: 99970730
+      Icons2_1: -562560004
+      Icons2_2: -1831123765
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
