@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TileManager : MonoBehaviour
@@ -11,17 +12,14 @@ public class TileManager : MonoBehaviour
     [SerializeField]
     private AnimationCurve _decorationSpawnRate;
 
+    [SerializeField]
+    private GameObject _poiObject;
+
     /// <summary>
     /// Array that holds all possible spawnpoints for Points of Interest (POI)
     /// </summary>
     [SerializeField]
-    private GameObject[] _poiSpawns;
-
-    /// <summary>
-    /// Array that holds all possible spawnpoints for decoration
-    /// </summary>
-    [SerializeField]
-    private GameObject[] _decorationSpawns;
+    private List<GameObject> _poiSpawns = new List<GameObject>();
 
     /// <summary>
     /// Array that holds cardinal direction buy managers (left, right, up down)
@@ -41,7 +39,19 @@ public class TileManager : MonoBehaviour
     private void Start()
     {
         DeleteOverlappingColliders();
+        SpawnPoi();
         Decorate();
+    }
+
+    private void SpawnPoi()
+    {
+        if(_poiObject == null)
+        {
+            return;
+        }
+        int randomPoint = Random.Range(0, _poiSpawns.Count);
+        Instantiate(_poiObject, _poiSpawns[randomPoint].transform.position, Quaternion.identity, transform);
+        _poiSpawns.RemoveAt(randomPoint);
     }
 
     private void Decorate()
@@ -52,8 +62,12 @@ public class TileManager : MonoBehaviour
         }
 
         List<GameObject> spawnList = new List<GameObject>();
-        spawnList.AddRange(_decorationSpawns);
-        for(int i = 0; i < _decorationSpawns.Length; i++)
+        foreach(GameObject spawnPoint in _poiSpawns)
+        {
+            Transform[] t = spawnPoint.GetComponentsInChildren<Transform>();
+            spawnList.AddRange(t.Select(transform => transform.gameObject));
+        }
+        for(int i = 0; i < spawnList.Count; i++)
         {
             int randomPoint = Random.Range(0, spawnList.Count);
             int randomDecoration = Random.Range(0, _decorations.Length);

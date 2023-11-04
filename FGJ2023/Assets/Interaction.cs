@@ -55,19 +55,23 @@ public class Interaction : MonoBehaviour, IInteractable
         switch(type)
         {
             case 0:
-                if(give)
+                if (give)
+                {
                     _inventory.BerryAmount += amount;
+                    ReplaceSprite();
+                }
                 else
-                    if(_inventory.BerryAmount >= amount)
+                {
+                    if (_inventory.BerryAmount >= amount)
+                    {
                         _inventory.BerryAmount -= amount;
+                        Destroy(gameObject);
+                    }
+                }
                 break;
             default:
                 break;
         }
-        if (give)
-            ReplaceSprite();
-        else
-            Destroy(gameObject);
     }
 
     public void ToggleInteractivity()

@@ -9,16 +9,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: _poiObject
+      value: 
+      objectReference: {fileID: 3397304069862245706, guid: 9c498fbb150d70544a1192c644bb6827, type: 3}
+    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: _poiSpawns.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.data[0]
       value: 
       objectReference: {fileID: 3946733106611506631, guid: 14d1af6a5323eeb46ac20c804f562e9b, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: _decorations.Array.data[1]
+      value: 
+      objectReference: {fileID: 3946733106611506631, guid: f3d402ed6c9645f4fbd2ba8765226ed9, type: 3}
+    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorationSpawnRate.m_Curve.Array.data[1].time
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7546318920146702809, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_Name

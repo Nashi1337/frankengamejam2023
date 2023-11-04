@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -82,7 +83,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        _interactable = other.GetComponent<IInteractable>();
+        IInteractable interactable = other.GetComponent<IInteractable>();
+        if(interactable != null)
+        {
+            _interactable = interactable;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

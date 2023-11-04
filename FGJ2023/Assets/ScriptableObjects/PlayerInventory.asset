@@ -16,4 +16,4 @@ MonoBehaviour:
   _woodAmount: 0
   _stoneAmount: 0
   _fishAmount: 0
-  _tileTokenAmount: 4
+  _tileTokenAmount: 50
