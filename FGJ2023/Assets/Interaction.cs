@@ -27,14 +27,14 @@ public class Interaction : MonoBehaviour, IInteractable
         {
             spriteRenderers[i].sprite = newSprite;
         }
-        toggleInteractivity();
+        ToggleInteractivity();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            toggleInteractivity();
+            ToggleInteractivity();
         }
     }
 
@@ -42,7 +42,7 @@ public class Interaction : MonoBehaviour, IInteractable
     {
         if (collision.tag == "Player")
         {
-            toggleInteractivity();
+            ToggleInteractivity();
         }
     }
 
@@ -60,9 +60,9 @@ public class Interaction : MonoBehaviour, IInteractable
 
         Destroy(gameObject);
     }
-}
 
-    public void toggleInteractivity()
+    public void ToggleInteractivity()
     {
-        SpeechBubble.SetActive(!SpeechBubble.activeSelf); ;
+        SpeechBubble.SetActive(!SpeechBubble.activeSelf);
     }
+}

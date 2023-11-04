@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeechBubble: {fileID: 3338113296581872127}
   newSprite: {fileID: 0}
-  give: 0
+  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
   type: 0
   amount: 0
 --- !u!1 &3599474183049170456
