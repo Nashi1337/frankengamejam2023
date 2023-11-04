@@ -58,7 +58,8 @@ public class Interaction : MonoBehaviour, IInteractable
                 if(give)
                     _inventory.BerryAmount += amount;
                 else
-                    _inventory.BerryAmount -= amount;
+                    if(_inventory.BerryAmount >= amount)
+                        _inventory.BerryAmount -= amount;
                 break;
             default:
                 break;
