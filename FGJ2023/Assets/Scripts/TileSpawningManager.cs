@@ -1,0 +1,127 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// This is the singleton for spawning Tiles. It is self contained and there is a Prefab
+/// in the Prefabs folder that you can drag into a scene and it will handling spawning tiles.
+/// </summary>
+public class TileSpawningManager : MonoBehaviour
+{
+    /// <summary>
+    /// Start tiles are spawned first in order. When there are no more start tiles left,
+    /// the list of weigthed tiles will be used. Leave empty for full randomization.
+    /// </summary>
+    [SerializeField]
+    private List<GameObject> StartTiles = new List<GameObject>();
+
+    /// <summary>
+    /// List of tiles and their weights. For each unit of weight, the tile is added to a pot
+    /// from where there is exactly one tile drawn.
+    /// </summary>
+    /// <example>
+    /// BerryTile with weight 1 and GrassTile with weight 1 makes them equally probable.
+    /// BerryTile with weight 2 and GrassTile with weight 1 will make BerryTiles twice as probable.
+    /// </example>
+    [SerializeField]
+    private List<WeightedTile> WeightedTiles = new List<WeightedTile>();
+
+    [SerializeField]
+    private List<GameObject> _history = new List<GameObject>();
+
+    /// <summary>
+    /// How far the Tiles will be spawned away. A Tile at [1, 0] will be spawned in WorldPosition [1 * Spacing.X, 0 * Spacing.Y]
+    /// </summary>
+    public Vector2 Spacing = new Vector2(20f, 20f);
+
+    /// <summary>
+    /// Singleton instance of the TileSpawningManager so it might be accessed by other scripts.
+    /// </summary>
+    private static TileSpawningManager _instance = null;
+
+    /// <summary>
+    /// Dictionary of the placed tiles.
+    /// </summary>
+    private Dictionary<Vector2Int, GameObject> _map = new Dictionary<Vector2Int, GameObject>();
+
+    private void Awake()
+    {
+        SetupSingleton();
+    }
+
+    /// <summary>
+    /// Destroys this TileSpawningManger if there is already one registered.
+    /// If not, this TileSpawningManger becomes the globally available instance.
+    /// </summary>
+    private void SetupSingleton()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        _history.Clear();
+        SpawnTile(Vector2Int.zero);
+    }
+
+    /// <summary>
+    /// Spawns a tile at a given position
+    /// </summary>
+    /// <param name="position"></param>
+    public void SpawnTile(Vector2Int position)
+    {
+        GameObject temporaryTile = null;
+        if(StartTiles.Count > 0)
+        {
+            temporaryTile = StartTiles[0];
+            StartTiles.RemoveAt(0);
+        }
+        else
+        {
+            temporaryTile = GetRandomTile();
+        }
+
+        if(temporaryTile == null)
+        {
+            Debug.LogError("There is no tile to spawn!");
+            return;
+        }
+
+        GameObject instantiatedTile = Instantiate(
+            temporaryTile,
+            new Vector3(position.x * Spacing.x, position.y * Spacing.y, 0f),
+            Quaternion.identity,
+            transform
+            );
+        instantiatedTile.name = $"{temporaryTile.name}-{position}";
+        _history.Add(temporaryTile);
+        _map.Add(position, temporaryTile);
+    }
+
+    /// <summary>
+    /// Returns a random tile after considering their weights.
+    /// </summary>
+    /// <returns></returns>
+    private GameObject GetRandomTile()
+    {
+        List<GameObject> tiles = new List<GameObject>();
+
+        foreach(WeightedTile weightedTile in WeightedTiles)
+        {
+            for(int i = 0; i < weightedTile.Weight; i++)
+            {
+                tiles.Add(weightedTile.Tile);
+            }
+        }
+
+        int randomTile = Random.Range(0, tiles.Count);
+        return tiles[randomTile];
+    }
+}
