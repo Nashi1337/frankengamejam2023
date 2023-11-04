@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Vector2 movementInput;
 
-    private IInteractable _interactable;
+    private IInteractable _interactable = null;
 
     private void Awake()
     {
@@ -32,11 +32,40 @@ public class PlayerController : MonoBehaviour
 
     private void OnAction(InputValue inputValue)
     {
-        if(_interactable != null)
-        {
-            _interactable.Interact();
-        }
+        _interactable?.Interact();
     }
+
+    //private void Update()
+    //{
+    //    if (canInteract && Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        Interaction interactable = Interactable.GetComponent<Interaction>();
+    //        int itemType = interactable.type;
+    //        int itemAmount = interactable.amount;
+    //        Debug.Log(itemType + " " + itemAmount);
+    //        if (interactable.give)
+    //        {
+    //            inventory[itemType] += itemAmount;
+    //            Destroy(Interactable);
+    //        }
+    //        else
+    //        {
+    //            if (inventory[itemType] >= interactable.amount)
+    //            {
+    //                inventory[itemType] -= interactable.amount;
+    //                interactable.ToggleInteractivity();
+    //            }
+    //            else
+    //            {
+    //                Debug.Log("Not enough items");
+    //            }
+    //        }
+
+    //        berryAmount.GetComponent<TextMeshProUGUI>().text = inventory[itemType].ToString();
+
+ 
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D other)
     {

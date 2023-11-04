@@ -10,10 +10,10 @@ public class Interaction : MonoBehaviour, IInteractable
     GameObject SpeechBubble;
     [SerializeField]
     Sprite newSprite;
-
     [SerializeField]
     private Inventory _inventory;
-
+    [SerializeField]
+    bool give;
     //0=berry
     [SerializeField]
     public int type;
@@ -28,14 +28,14 @@ public class Interaction : MonoBehaviour, IInteractable
         {
             spriteRenderers[i].sprite = newSprite;
         }
-        SpeechBubble.SetActive(false);
+        ToggleInteractivity();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            SpeechBubble.SetActive(true);
+            ToggleInteractivity();
         }
     }
 
@@ -43,7 +43,7 @@ public class Interaction : MonoBehaviour, IInteractable
     {
         if (collision.tag == "Player")
         {
-            SpeechBubble.SetActive(false);
+            ToggleInteractivity();
         }
     }
 
@@ -53,12 +53,20 @@ public class Interaction : MonoBehaviour, IInteractable
         switch(type)
         {
             case 0:
-                _inventory.BerryAmount += amount;
+                if(give)
+                    _inventory.BerryAmount += amount;
+                else
+                    _inventory.BerryAmount -= amount;
                 break;
             default:
                 break;
         }
 
         Destroy(gameObject);
+    }
+
+    public void ToggleInteractivity()
+    {
+        SpeechBubble.SetActive(!SpeechBubble.activeSelf);
     }
 }
