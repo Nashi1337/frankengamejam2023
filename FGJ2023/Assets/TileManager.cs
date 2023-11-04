@@ -37,7 +37,6 @@ public class TileManager : MonoBehaviour
                     Collider2D[] collidingColliders = Physics2D.OverlapBoxAll(collider.transform.position, new Vector2(1, 1), 0, layerMask);
                     foreach (Collider2D collider2 in collidingColliders)
                     {
-                        Debug.Log(collider2.name);
                         if (collider2.name.Contains("Right"))
                         {
                             Destroy(collider.gameObject);
@@ -50,7 +49,6 @@ public class TileManager : MonoBehaviour
                     Collider2D[] collidingColliders = Physics2D.OverlapBoxAll(collider.transform.position, new Vector2(1, 1), 0, layerMask);
                     foreach (Collider2D collider2 in collidingColliders)
                     {
-                        Debug.Log(collider2.name);
                         if (collider2.name.Contains("Down"))
                         {
                             Destroy(collider.gameObject);
@@ -63,7 +61,6 @@ public class TileManager : MonoBehaviour
                     Collider2D[] collidingColliders = Physics2D.OverlapBoxAll(collider.transform.position, new Vector2(1, 1), 0, layerMask);
                     foreach (Collider2D collider2 in collidingColliders)
                     {
-                        Debug.Log(collider2.name);
                         if (collider2.name.Contains("Up"))
                         {
                             Destroy(collider.gameObject);
@@ -74,17 +71,4 @@ public class TileManager : MonoBehaviour
             }
         }
     }
-
-    private Collider2D FindChildCollider(Collider2D[] colliders, string name)
-    {
-        foreach (Collider2D collider in colliders)
-        {
-            if (collider.name.Contains(name))
-            {
-                return collider;
-            }
-        }
-        return null;
-    }
-
 }
