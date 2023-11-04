@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Interaction : MonoBehaviour
+public class Interaction : MonoBehaviour, IInteractable
 {
     [SerializeField]
     GameObject SpeechBubble;
     [SerializeField]
     Sprite newSprite;
+
+    [SerializeField]
+    private Inventory _inventory;
 
     //0=berry
     [SerializeField]
@@ -27,6 +30,7 @@ public class Interaction : MonoBehaviour
         }
         SpeechBubble.SetActive(false);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -41,5 +45,20 @@ public class Interaction : MonoBehaviour
         {
             SpeechBubble.SetActive(false);
         }
+    }
+
+    public void Interact()
+    {
+        //I hate dis, the type should be scriptable objects too.
+        switch(type)
+        {
+            case 0:
+                _inventory.BerryAmount += amount;
+                break;
+            default:
+                break;
+        }
+
+        Destroy(gameObject);
     }
 }

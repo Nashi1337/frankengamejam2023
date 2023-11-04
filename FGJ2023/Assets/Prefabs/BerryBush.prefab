@@ -164,7 +164,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.12140368, g: 0.23584908, b: 0.11681204, a: 1}
   m_FlipX: 0
@@ -260,6 +260,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeechBubble: {fileID: 3338113296581872127}
   newSprite: {fileID: 0}
+  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
+  type: 0
+  amount: 0
 --- !u!1 &3599474183049170456
 GameObject:
   m_ObjectHideFlags: 0
