@@ -65,6 +65,9 @@ public class TileSpawningManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Deletes history from previous plays/editor tests and spawns the basetile.
+    /// </summary>
     private void Start()
     {
         _history.Clear();

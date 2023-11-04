@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+/// <summary>
+/// Adds a test button during play mode to spawn new tiles.
+/// </summary>
 [CustomEditor(typeof(TileSpawningManager))]
 public class TileSpawningManagerEditor : Editor
 {
