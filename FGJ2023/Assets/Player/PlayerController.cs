@@ -38,9 +38,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         _interactable = other.GetComponent<IInteractable>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        _interactable = collision.collider.GetComponent<IInteractable>();
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        _interactable = null;
     }
 
     private void OnTriggerExit2D(Collider2D other)

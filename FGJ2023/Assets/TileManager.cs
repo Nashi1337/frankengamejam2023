@@ -19,11 +19,23 @@ public class TileManager : MonoBehaviour
     private GameObject[] _decorationSpawns;
 
     [SerializeField]
+    private BuyTileManager[] _buyTileManagers;
+
+    [SerializeField]
     private Vector2Int _position;
+
+    private void Start()
+    {
+        DeleteOverlappingColliders();
+    }
 
     public void SetUp(Vector2Int position)
     {
         _position = position;
+        foreach(BuyTileManager buyTileManager in _buyTileManagers)
+        {
+            buyTileManager.SetUp(_position);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

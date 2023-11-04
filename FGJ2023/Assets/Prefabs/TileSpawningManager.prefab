@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bdd619307887eb43a4bb46d659035f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartTiles:
+  _startTiles:
   - {fileID: 4895388521364656534, guid: 4744c08f8d4e4b0409df6a1e4ccf67ae, type: 3}
-  WeightedTiles:
+  _weightedTiles:
   - Tile: {fileID: 5119574649647528517, guid: 5a596fb5673a3da409e79a1dfd2bb699, type: 3}
     Weight: 1
   - Tile: {fileID: 8175426959630102619, guid: a4331b1eeae392c4ca68fa203fd2d00d, type: 3}
     Weight: 1
   _history: []
-  Spacing: {x: 20, y: 20}
+  _spacing: {x: 20, y: 20}

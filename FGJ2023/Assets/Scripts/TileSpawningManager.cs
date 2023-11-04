@@ -40,6 +40,13 @@ public class TileSpawningManager : MonoBehaviour
     /// </summary>
     private static TileSpawningManager _instance = null;
 
+    public static TileSpawningManager Instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
     /// <summary>
     /// Dictionary of the placed tiles.
     /// </summary>

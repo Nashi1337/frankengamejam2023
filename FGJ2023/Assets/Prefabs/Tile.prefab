@@ -1677,6 +1677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 836638196330828277}
   - component: {fileID: 5894102978275690221}
+  - component: {fileID: 206127020435314401}
   m_Layer: 7
   m_Name: ColliderUp
   m_TagString: Untagged
@@ -1744,6 +1745,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.05}
   m_EdgeRadius: 0
+--- !u!114 &206127020435314401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5371458075564637796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f01b80d32b00243bc2bed0e36928f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tileDirection: 1
+  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
+  _position: {x: 0, y: 0}
 --- !u!1 &5385867491962378173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,6 +2111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4357818647021042484}
   - component: {fileID: 9141983207961636266}
+  - component: {fileID: 8303392599629288361}
   m_Layer: 7
   m_Name: ColliderDown
   m_TagString: Untagged
@@ -2162,6 +2179,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.05}
   m_EdgeRadius: 0
+--- !u!114 &8303392599629288361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6409944449895161174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f01b80d32b00243bc2bed0e36928f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tileDirection: 3
+  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
+  _position: {x: 0, y: 0}
 --- !u!1 &6462589998381703147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,6 +2421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8641964992885116720}
   - component: {fileID: 958038573260956027}
+  - component: {fileID: 5488408067184787565}
   m_Layer: 7
   m_Name: ColliderRight
   m_TagString: Untagged
@@ -2456,6 +2489,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5488408067184787565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204220335618273961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f01b80d32b00243bc2bed0e36928f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tileDirection: 2
+  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
+  _position: {x: 0, y: 0}
 --- !u!1 &7389625991481707319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,6 +2868,12 @@ MonoBehaviour:
   - {fileID: 1128440583433508640}
   - {fileID: 903247568813597958}
   - {fileID: 4543867357820353339}
+  _buyTileManagers:
+  - {fileID: 5488408067184787565}
+  - {fileID: 6052797847606575739}
+  - {fileID: 8303392599629288361}
+  - {fileID: 206127020435314401}
+  _position: {x: 0, y: 0}
 --- !u!1 &7549331485450338106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,6 +3163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7750194744856708904}
   - component: {fileID: 1083008806392596554}
+  - component: {fileID: 6052797847606575739}
   m_Layer: 7
   m_Name: ColliderLeft
   m_TagString: Untagged
@@ -3176,6 +3231,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6052797847606575739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724235689124870319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f01b80d32b00243bc2bed0e36928f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tileDirection: 0
+  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
+  _position: {x: 0, y: 0}
 --- !u!1 &8767886998101656868
 GameObject:
   m_ObjectHideFlags: 0
