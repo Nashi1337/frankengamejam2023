@@ -8,9 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2482085437385213827, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ccb436b7045c25a43899a1d2081021d4, type: 3}
+    - target: {fileID: 6469602133709060693, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469602133709060693, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: _poiObject
+      value: 
+      objectReference: {fileID: 3946733106611506631, guid: 9e4797beab392924cb2493bb37372ae9, type: 3}
     - target: {fileID: 7546318920146702809, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_Name
-      value: Tile
+      value: StartTile
       objectReference: {fileID: 0}
     - target: {fileID: 7784766878515503947, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_LocalPosition.x

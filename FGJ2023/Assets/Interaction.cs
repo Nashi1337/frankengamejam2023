@@ -16,7 +16,7 @@ public class Interaction : MonoBehaviour, IInteractable
     private Inventory _inventory;
     [SerializeField]
     bool give;
-    //0=berry
+    //0=berry, 1=wood, 2=fish, 3=stone
     [SerializeField]
     public int type;
     public int amount;
@@ -69,6 +69,51 @@ public class Interaction : MonoBehaviour, IInteractable
                     }
                 }
                 break;
+            case 1:
+                if (give)
+                {
+                    _inventory.WoodAmount += amount;
+                    ReplaceSprite();
+                }
+                else
+                {
+                    if (_inventory.WoodAmount >= amount)
+                    {
+                        _inventory.WoodAmount -= amount;
+                        Destroy(gameObject);
+                    }
+                }
+                break;
+            case 2:
+                if (give)
+                {
+                    _inventory.FishAmount += amount;
+                    ReplaceSprite();
+                }
+                else
+                {
+                    if (_inventory.FishAmount >= amount)
+                    {
+                        _inventory.FishAmount -= amount;
+                        Destroy(gameObject);
+                    }
+                }
+                break;
+            case 3:
+                if (give)
+                {
+                    _inventory.StoneAmount += amount;
+                    ReplaceSprite();
+                }
+                else
+                {
+                    if (_inventory.StoneAmount >= amount)
+                    {
+                        _inventory.StoneAmount -= amount;
+                        Destroy(gameObject);
+                    }
+                }
+                break;
             default:
                 break;
         }
@@ -82,6 +127,8 @@ public class Interaction : MonoBehaviour, IInteractable
     public void ReplaceSprite()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = usedSprite;
+        Destroy(gameObject.GetComponent<PolygonCollider2D>());
+        gameObject.AddComponent<PolygonCollider2D>();
         ToggleInteractivity();
         Destroy(this);
     }

@@ -10,6 +10,12 @@ public class InventoryListener : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI _berryAmount;
+    [SerializeField]
+    private TextMeshProUGUI _fishAmount;
+    [SerializeField]
+    private TextMeshProUGUI _woodAmount;
+    [SerializeField]
+    private TextMeshProUGUI _stoneAmount;
 
     private void Awake()
     {
@@ -34,5 +40,8 @@ public class InventoryListener : MonoBehaviour
     private void UpdateUi()
     {
         _berryAmount.text = $"{_inventory.BerryAmount}";
+        _fishAmount.text = $"{_inventory.FishAmount}";
+        _woodAmount.text = $"{_inventory.WoodAmount}";
+        _stoneAmount.text = $"{_inventory.StoneAmount}";
     }
 }

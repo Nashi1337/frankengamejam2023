@@ -113,12 +113,12 @@ TextureImporter:
       name: DinoCat_0
       rect:
         serializedVersion: 2
-        x: 308
-        y: 1906
-        width: 1005
-        height: 1182
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 309
+        y: 1915
+        width: 1103
+        height: 1217
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: DinoCat_1
       rect:
         serializedVersion: 2
-        x: 1615
-        y: 1918
-        width: 993
-        height: 1158
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1616
+        y: 1919
+        width: 1103
+        height: 1217
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: DinoCat_2
       rect:
         serializedVersion: 2
-        x: 2994
+        x: 2995
         y: 1835
-        width: 1104
-        height: 1218
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 1103
+        height: 1217
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: DinoCat_3
       rect:
         serializedVersion: 2
-        x: 380
-        y: 555
-        width: 993
-        height: 1158
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 381
+        y: 556
+        width: 1103
+        height: 1217
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
