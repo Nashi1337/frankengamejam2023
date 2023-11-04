@@ -13,7 +13,7 @@ public class TileSpawningManager : MonoBehaviour
     /// the list of weigthed tiles will be used. Leave empty for full randomization.
     /// </summary>
     [SerializeField]
-    private List<GameObject> StartTiles = new List<GameObject>();
+    private List<GameObject> _startTiles = new List<GameObject>();
 
     /// <summary>
     /// List of tiles and their weights. For each unit of weight, the tile is added to a pot
@@ -24,7 +24,7 @@ public class TileSpawningManager : MonoBehaviour
     /// BerryTile with weight 2 and GrassTile with weight 1 will make BerryTiles twice as probable.
     /// </example>
     [SerializeField]
-    private List<WeightedTile> WeightedTiles = new List<WeightedTile>();
+    private List<WeightedTile> _weightedTiles = new List<WeightedTile>();
 
     [SerializeField]
     private List<GameObject> _history = new List<GameObject>();
@@ -32,7 +32,8 @@ public class TileSpawningManager : MonoBehaviour
     /// <summary>
     /// How far the Tiles will be spawned away. A Tile at [1, 0] will be spawned in WorldPosition [1 * Spacing.X, 0 * Spacing.Y]
     /// </summary>
-    public Vector2 Spacing = new Vector2(20f, 20f);
+    [SerializeField]
+    private Vector2 _spacing = new Vector2(20f, 20f);
 
     /// <summary>
     /// Singleton instance of the TileSpawningManager so it might be accessed by other scripts.
@@ -89,10 +90,10 @@ public class TileSpawningManager : MonoBehaviour
         }
 
         GameObject temporaryTile = null;
-        if(StartTiles.Count > 0)
+        if(_startTiles.Count > 0)
         {
-            temporaryTile = StartTiles[0];
-            StartTiles.RemoveAt(0);
+            temporaryTile = _startTiles[0];
+            _startTiles.RemoveAt(0);
         }
         else
         {
@@ -107,7 +108,7 @@ public class TileSpawningManager : MonoBehaviour
 
         GameObject instantiatedTile = Instantiate(
             temporaryTile,
-            new Vector3(position.x * Spacing.x, position.y * Spacing.y, 0f),
+            new Vector3(position.x * _spacing.x, position.y * _spacing.y, 0f),
             Quaternion.identity,
             transform
             );
@@ -126,7 +127,7 @@ public class TileSpawningManager : MonoBehaviour
     {
         List<GameObject> tiles = new List<GameObject>();
 
-        foreach(WeightedTile weightedTile in WeightedTiles)
+        foreach(WeightedTile weightedTile in _weightedTiles)
         {
             for(int i = 0; i < weightedTile.Weight; i++)
             {
