@@ -14,7 +14,7 @@ public class Inventory : ScriptableObject
     [SerializeField]
     private int _fishAmount;
 
-    public delegate void OnValueChangedHandler(int newValue);
+    public delegate void OnValueChangedHandler();
     public OnValueChangedHandler OnValueChanged;
 
     public int BerryAmount
@@ -27,7 +27,7 @@ public class Inventory : ScriptableObject
         set
         {
             _berryAmount = value;
-            OnValueChanged?.Invoke(_berryAmount);
+            OnValueChanged?.Invoke();
         }
     }
 
@@ -41,7 +41,7 @@ public class Inventory : ScriptableObject
         set
         {
             _woodAmount = value;
-            OnValueChanged?.Invoke(_woodAmount);
+            OnValueChanged?.Invoke();
         }
     }
 
@@ -55,7 +55,7 @@ public class Inventory : ScriptableObject
         set
         {
             _stoneAmount = value;
-            OnValueChanged?.Invoke(_stoneAmount);
+            OnValueChanged?.Invoke();
         }
     }
     public int FishAmount
@@ -68,7 +68,16 @@ public class Inventory : ScriptableObject
         set
         {
             _fishAmount = value;
-            OnValueChanged?.Invoke(_fishAmount);
+            OnValueChanged?.Invoke();
         }
+    }
+
+    public void ResetInventory()
+    {
+        _berryAmount = 0;
+        _woodAmount = 0;
+        _stoneAmount = 0;
+        _fishAmount = 0;
+        OnValueChanged?.Invoke();
     }
 }
