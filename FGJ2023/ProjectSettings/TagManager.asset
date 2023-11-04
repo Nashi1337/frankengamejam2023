@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - tile
+  - Interactable
   layers:
   - Default
   - TransparentFX
