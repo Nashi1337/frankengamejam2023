@@ -72,11 +72,19 @@ public class TileSpawningManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Spawns a tile at a given position
+    /// Spawns a tile at a given position. When the start tiles are used up,
+    /// randomly generated tiles with weights will be used. If there is already a tile
+    /// at the position, the generation is rejected.
     /// </summary>
     /// <param name="position"></param>
-    public void SpawnTile(Vector2Int position)
+    /// <returns></returns>
+    public bool SpawnTile(Vector2Int position)
     {
+        if(_map.ContainsKey(position))
+        {
+            return false;
+        }
+
         GameObject temporaryTile = null;
         if(StartTiles.Count > 0)
         {
@@ -91,7 +99,7 @@ public class TileSpawningManager : MonoBehaviour
         if(temporaryTile == null)
         {
             Debug.LogError("There is no tile to spawn!");
-            return;
+            return false;
         }
 
         GameObject instantiatedTile = Instantiate(
@@ -103,6 +111,8 @@ public class TileSpawningManager : MonoBehaviour
         instantiatedTile.name = $"{temporaryTile.name}-{position}";
         _history.Add(temporaryTile);
         _map.Add(position, temporaryTile);
+
+        return true;
     }
 
     /// <summary>
