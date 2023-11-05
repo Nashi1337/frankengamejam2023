@@ -74,6 +74,7 @@ public class Inventory : ScriptableObject
             OnValueChanged?.Invoke();
         }
     }
+
     public int TileTokenAmount
     {
         get
