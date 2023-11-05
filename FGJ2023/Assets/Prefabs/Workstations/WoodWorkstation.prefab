@@ -223,8 +223,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpeechBubble: {fileID: 0}
   _hasDino: 0
-  _resourceType: 2
-  _timeBetweenResource: 0
+  _resourceType: 1
+  _timeBetweenResource: 5
   _timeToNextResource: 0
   _inventory: {fileID: 0}
 --- !u!1001 &6958696945533740827
