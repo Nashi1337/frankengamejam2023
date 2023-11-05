@@ -1,0 +1,101 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Workshop : MonoBehaviour, IInteractable
+{
+    [SerializeField]
+    GameObject SpeechBubble;
+
+    [SerializeField]
+    private bool _hasDino = false;
+    public bool DinoCanBePlaced => !_hasDino;
+
+    [SerializeField]
+    private int _resourceType;
+
+    [SerializeField]
+    private float _timeBetweenResource;
+
+    [SerializeField]
+    private float _timeToNextResource;
+
+    [SerializeField]
+    private Inventory _inventory;
+
+    public void Interact(PlayerController player)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void PlaceDino(PlayerController player)
+    {
+        _hasDino = true;
+        _inventory = player.Inventory;
+        _timeToNextResource = _timeBetweenResource;
+        GameObject dino = player.HeldDino.gameObject;
+        dino.transform.SetParent(transform, false);
+        dino.transform.localScale = Vector3.one;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            SetInteractivity(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            SetInteractivity(false);
+        }
+    }
+
+    public void SetInteractivity(bool value)
+    {
+        if (SpeechBubble != null)
+        {
+            SpeechBubble.SetActive(value);
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(_hasDino)
+        {
+            _timeToNextResource -= Time.deltaTime;
+            if(_timeToNextResource < 0 )
+            {
+                switch(_resourceType)
+                {
+                    case 0:
+                        _inventory.BerryAmount += 1;
+                        break;
+
+                    case 1:
+                        _inventory.WoodAmount += 1;
+                        break;
+
+                    case 2:
+                        _inventory.FishAmount += 1;
+                        break;
+
+                    case 3:
+                        _inventory.StoneAmount += 1;
+                        break;
+                }
+                _timeToNextResource = _timeBetweenResource;
+            }
+        }
+    }
+}

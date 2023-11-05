@@ -32,8 +32,17 @@ public class PlayerController : MonoBehaviour
     private bool isWalking;
     private bool lookLeft = false;
     private bool previousLookLeft = false;
+
     [SerializeField]
-    private bool holdingDino = false;
+    private Dino _heldDino = null;
+
+    public Dino HeldDino
+    {
+        get
+        {
+            return _heldDino;
+        }
+    }
 
     private HashSet<IInteractable> _interactables = new HashSet<IInteractable>();
     private Animator animator;
@@ -93,9 +102,10 @@ public class PlayerController : MonoBehaviour
         _interactables.RemoveWhere(interactable => (interactable as Component).IsDestroyed());
         IInteractable dinoInteractable = _interactables.FirstOrDefault(i => i.DinoCanBePlaced);
         //If we hold a dino and are at a workstation that can have a dino, we place the dino
-        if (holdingDino && dinoInteractable != null)
+        if (_heldDino != null && dinoInteractable != null)
         {
-            dinoInteractable.PlaceDino();
+            dinoInteractable.PlaceDino(this);
+            _heldDino = null;
         }
         // if we're not holding a dino, we just interact with the first thing in the list
         else
@@ -142,12 +152,12 @@ public class PlayerController : MonoBehaviour
 
     public bool TakeDino(Dino dino)
     {
-        if(holdingDino)
+        if(_heldDino != null)
         {
             return false;
         }
-        dino.gameObject.transform.SetParent(DinoHolder.gameObject.transform, false);
-        holdingDino = true;
+        _heldDino = dino;
+        _heldDino.gameObject.transform.SetParent(DinoHolder.gameObject.transform, false);
         return true;
     }
 }

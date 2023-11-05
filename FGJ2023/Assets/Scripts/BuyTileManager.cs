@@ -51,7 +51,7 @@ public class BuyTileManager : MonoBehaviour, IInteractable
         }
     }
 
-    public void PlaceDino()
+    public void PlaceDino(PlayerController player)
     {
         throw new NotImplementedException();
     }

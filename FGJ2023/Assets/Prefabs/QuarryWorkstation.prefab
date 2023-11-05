@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3470643444330361040}
   - component: {fileID: 850804540528927902}
+  - component: {fileID: 5016782988256110837}
   - component: {fileID: 3085285251271624940}
-  - component: {fileID: 9172723509307773151}
   - component: {fileID: -4822780741144813633}
   - component: {fileID: 5482810179530754482}
   - component: {fileID: 7608216760872908242}
@@ -91,6 +91,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5016782988256110837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397304069862245706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90823eb93752fb47b919289ea89e6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeechBubble: {fileID: 6029011522203101519}
+  _hasDino: 0
+  _resourceType: 3
+  _timeBetweenResource: 5
+  _timeToNextResource: 0
+  _inventory: {fileID: 0}
 --- !u!58 &3085285251271624940
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -126,27 +144,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.43}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &9172723509307773151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3397304069862245706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e7e757a5425d0644b235c2ad21de633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeechBubble: {fileID: 6029011522203101519}
-  itemSprite: {fileID: 0}
-  usedSprite: {fileID: 0}
-  give: 0
-  isWorkstation: 1
-  pickupable: 0
-  hasWorker: 0
-  type: 1
-  amount: 0
 --- !u!114 &-4822780741144813633
 MonoBehaviour:
   m_ObjectHideFlags: 0

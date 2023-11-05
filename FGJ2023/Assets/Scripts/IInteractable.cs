@@ -11,5 +11,5 @@ public interface IInteractable
         get;
     }
 
-    void PlaceDino();
+    void PlaceDino(PlayerController player);
 }

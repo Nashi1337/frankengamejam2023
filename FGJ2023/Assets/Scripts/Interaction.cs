@@ -141,7 +141,7 @@ public class Interaction : MonoBehaviour, IInteractable
         Destroy(this);
     }
 
-    public void PlaceDino()
+    public void PlaceDino(PlayerController player)
     {
         throw new System.NotImplementedException();
     }
