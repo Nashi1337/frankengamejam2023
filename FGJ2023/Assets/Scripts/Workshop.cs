@@ -36,6 +36,7 @@ public class Workshop : MonoBehaviour, IInteractable
         GameObject dino = player.HeldDino.gameObject;
         dino.transform.SetParent(transform, false);
         dino.transform.localScale = Vector3.one;
+        Destroy(dino.GetComponent<Dino>());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
