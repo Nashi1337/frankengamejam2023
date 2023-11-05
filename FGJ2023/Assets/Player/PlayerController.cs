@@ -89,6 +89,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnAction(InputValue inputValue)
     {
+        //While holding a dino, no interaction with other things possible
+        if(holdingDino)
+        {
+            return;
+        }
         _interactables.RemoveWhere(interactable => (interactable as Component).IsDestroyed());
         foreach (IInteractable interactible in _interactables.ToList())
         {
