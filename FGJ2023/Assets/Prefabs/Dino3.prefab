@@ -175,7 +175,6 @@ MonoBehaviour:
   SpeechBubble: {fileID: 450107253975772177}
   itemSprite: {fileID: -1831123765, guid: 3842cf93cdea7404d8d86b610883c34e, type: 3}
   usedSprite: {fileID: 0}
-  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
   give: 0
   isWorkstation: 0
   pickupable: 0
@@ -216,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
+  _worldPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &3820743671230767685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,13 +228,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeechBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 3691007799183363668, guid: 50602f5fcc3dc6249ab96abcf376b2ae, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6018987063990278033, guid: 50602f5fcc3dc6249ab96abcf376b2ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 6018987063990278033, guid: 50602f5fcc3dc6249ab96abcf376b2ae, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.23
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 6018987063990278033, guid: 50602f5fcc3dc6249ab96abcf376b2ae, type: 3}
       propertyPath: m_LocalPosition.z

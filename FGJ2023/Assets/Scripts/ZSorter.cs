@@ -7,6 +7,9 @@ public class ZSorter : MonoBehaviour
     [SerializeField]
     private SpriteRenderer _spriteRenderer;
 
+    [SerializeField]
+    private Vector3 _worldPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,7 @@ public class ZSorter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -1000f);
+        _worldPosition = transform.position;
+        _spriteRenderer.sortingOrder = (int)(transform.position.y * -100f);
     }
 }

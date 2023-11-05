@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3397304069862245706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
+  _worldPosition: {x: 0, y: 0, z: 0}
 --- !u!70 &5482810179530754482
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -191,9 +192,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04, y: 0.69}
-  m_Size: {x: 0.9, y: 0.58}
-  m_Direction: 1
+  m_Offset: {x: 0.02, y: 0.48}
+  m_Size: {x: 0.9, y: 0.82}
+  m_Direction: 0
 --- !u!70 &7608216760872908242
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

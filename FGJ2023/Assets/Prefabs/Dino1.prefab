@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1581549014077192442}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.24937502, y: -0.250625, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -175,7 +175,6 @@ MonoBehaviour:
   SpeechBubble: {fileID: 6308668420078971342}
   itemSprite: {fileID: 119753323, guid: 4d8e2ef756c5f1f43871897d4a0ae5df, type: 3}
   usedSprite: {fileID: 0}
-  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
   give: 0
   isWorkstation: 0
   pickupable: 0
@@ -216,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
+  _worldPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &7256984041076647834
 PrefabInstance:
   m_ObjectHideFlags: 0
