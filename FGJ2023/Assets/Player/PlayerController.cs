@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float speed = (isWalking ? walkSpeed : sprintSpeed);
+        float speed = (isWalking || HeldDino ? walkSpeed : sprintSpeed);
         rigidbody.velocity = movementInput * speed;
         bool vertical = !Mathf.Approximately(movementInput.y, 0f);
         float animationSpeed = speed / walkSpeed;
