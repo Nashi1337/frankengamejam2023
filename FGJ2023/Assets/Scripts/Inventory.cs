@@ -95,7 +95,7 @@ public class Inventory : ScriptableObject
         _woodAmount = 0;
         _stoneAmount = 0;
         _fishAmount = 0;
-        _tileTokenAmount = 50;
+        _tileTokenAmount = 5000;
         OnValueChanged?.Invoke();
     }
 }
