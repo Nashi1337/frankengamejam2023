@@ -133,6 +133,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  topHatAnimator: {fileID: 9100000, guid: 4378b6097e74e524d9c82235571a9fbc, type: 2}
 --- !u!58 &934962604043511241
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 800
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Dino3TopHat_0
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 2901
+        width: 1749
+        height: 2228
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d349290d44871c4a947dda63f07911c
+      internalID: 418346381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dino3TopHat_1
+      rect:
+        serializedVersion: 2
+        x: 2831
+        y: 2901
+        width: 1833
+        height: 2254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3617da5f4f5c5c45ac31f47776207ed
+      internalID: -1604934969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dino3TopHat_3
+      rect:
+        serializedVersion: 2
+        x: 2977
+        y: 409
+        width: 1776
+        height: 2199
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a6e960270cd304c9b466855efa5cde
+      internalID: 193788855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dino3TopHat_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 326
+        width: 2069
+        height: 1602
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3aad667f63f314ead6fe15a87a3004
+      internalID: -96870578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +203,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dino3TopHat_0: 418346381
+      Dino3TopHat_1: -1604934969
+      Dino3TopHat_2: -96870578
+      Dino3TopHat_3: 193788855
+      Dino3TopHat_4: -198547226
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
