@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Inventory _inventory;
 
+    [SerializeField]
+    private AudioManager audioManager;
+
     public Inventory Inventory
     {
         get
@@ -116,6 +119,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "Dino")
+        {
+            audioManager.DinoGrunt();
+        }
+        else if (other.gameObject.tag == "Cat")
+        {
+            audioManager.CatMeow();
+        }
         IInteractable interactable = other.GetComponent<IInteractable>();
         if (interactable != null)
         {
