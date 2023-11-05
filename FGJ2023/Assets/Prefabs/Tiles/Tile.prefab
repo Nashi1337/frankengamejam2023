@@ -2720,7 +2720,6 @@ GameObject:
   - component: {fileID: 2482085437385213827}
   - component: {fileID: 6469602133709060693}
   - component: {fileID: 7172246276551823929}
-  - component: {fileID: 1336254227948378249}
   m_Layer: 6
   m_Name: Tile
   m_TagString: tile
@@ -2899,20 +2898,6 @@ MonoBehaviour:
   - {fileID: 8303392599629288361}
   - {fileID: 206127020435314401}
   _position: {x: 0, y: 0}
---- !u!114 &1336254227948378249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7546318920146702809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36629a3b6088e044a98e4b1ff4bb74b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spriteRenderer: {fileID: 0}
-  _worldPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &7549331485450338106
 GameObject:
   m_ObjectHideFlags: 0
