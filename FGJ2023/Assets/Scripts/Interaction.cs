@@ -18,11 +18,14 @@ public class Interaction : MonoBehaviour, IInteractable
     public int type;
     public int amount;
 
+    [SerializeField]
+    private Vector2Int _range = new Vector2Int(1, 5);
+
     public bool DinoCanBePlaced => false;
 
     private void Awake()
     {
-        amount = Random.Range(1, 5);
+        amount = Random.Range(_range.x, _range.y);
         SpriteRenderer[] spriteRenderers = SpeechBubble.GetComponentsInChildren<SpriteRenderer>();
         for (int i = 1; i < amount + 1 && i < spriteRenderers.Length; i++)
         {
