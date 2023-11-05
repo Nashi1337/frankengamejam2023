@@ -75,24 +75,24 @@ public class Workshop : MonoBehaviour, IInteractable
         if(_hasDino)
         {
             _timeToNextResource -= Time.deltaTime;
-            if(_timeToNextResource < 0 )
+            if(_timeToNextResource < 0)
             {
                 switch(_resourceType)
                 {
                     case 0:
-                        _inventory.BerryAmount += 1;
+                        _inventory.BerryAmount = Mathf.Min(_inventory.BerryAmount + 1, 10);
                         break;
 
                     case 1:
-                        _inventory.WoodAmount += 1;
+                        _inventory.WoodAmount = Mathf.Min(_inventory.WoodAmount + 1, 10);
                         break;
 
                     case 2:
-                        _inventory.FishAmount += 1;
+                        _inventory.FishAmount = Mathf.Min(_inventory.FishAmount + 1, 10);
                         break;
 
                     case 3:
-                        _inventory.StoneAmount += 1;
+                        _inventory.StoneAmount = Mathf.Min(_inventory.StoneAmount + 1, 10); ;
                         break;
                 }
                 _timeToNextResource = _timeBetweenResource;
