@@ -68,4 +68,16 @@ public class AudioManager : MonoBehaviour
     {
         dinoChewing.Play();
     }
+
+    public void PlayerExerted()
+    {
+        if (exerted.isPlaying)
+        {
+            exerted.Stop();
+        }
+        else
+        {
+            exerted.Play();
+        }
+    }
 }

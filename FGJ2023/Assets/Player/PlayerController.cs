@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour
         //If we hold a dino and are at a workstation that can have a dino, we place the dino
         if (_heldDino != null && dinoInteractable != null)
         {
+            audioManager.PlayerExerted();
             dinoInteractable.PlaceDino(this);
             _interactables.Remove(dinoInteractable);
             _heldDino = null;
@@ -170,6 +171,7 @@ public class PlayerController : MonoBehaviour
         }
         _heldDino = dino;
         _heldDino.gameObject.transform.SetParent(DinoHolder.gameObject.transform, false);
+        audioManager.PlayerExerted();
         return true;
     }
 }
