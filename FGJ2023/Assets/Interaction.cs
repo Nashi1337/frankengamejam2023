@@ -16,7 +16,10 @@ public class Interaction : MonoBehaviour, IInteractable
     private Inventory _inventory;
     [SerializeField]
     bool give;
+    [SerializeField]
+    bool isWorkstation;
     public bool pickupable;
+    public bool hasWorker;
     //0=berry, 1=wood, 2=fish, 3=stone
     [SerializeField]
     public int type;
@@ -53,70 +56,80 @@ public class Interaction : MonoBehaviour, IInteractable
     public void Interact()
     {
         //I hate dis, the type should be scriptable objects too.
-        switch(type)
+        if (!isWorkstation)
         {
-            case 0:
-                if (give)
-                {
-                    _inventory.BerryAmount += amount;
-                    ReplaceSprite();
-                }
-                else
-                {
-                    if (_inventory.BerryAmount >= amount)
+            switch (type)
+            {
+                case 0:
+                    if (give)
                     {
-                        _inventory.BerryAmount -= amount;
-                        PickUpDino();
+                        _inventory.BerryAmount += amount;
+                        ReplaceSprite();
                     }
-                }
-                break;
-            case 1:
-                if (give)
-                {
-                    _inventory.WoodAmount += amount;
-                    ReplaceSprite();
-                }
-                else
-                {
-                    if (_inventory.WoodAmount >= amount)
+                    else
                     {
-                        _inventory.WoodAmount -= amount;
-                        Destroy(gameObject);
+                        if (_inventory.BerryAmount >= amount)
+                        {
+                            _inventory.BerryAmount -= amount;
+                            PickUpDino();
+                        }
                     }
-                }
-                break;
-            case 2:
-                if (give)
-                {
-                    _inventory.FishAmount += amount;
-                    ReplaceSprite();
-                }
-                else
-                {
-                    if (_inventory.FishAmount >= amount)
+                    break;
+                case 1:
+                    if (give)
                     {
-                        _inventory.FishAmount -= amount;
-                        Destroy(gameObject);
+                        _inventory.WoodAmount += amount;
+                        ReplaceSprite();
                     }
-                }
-                break;
-            case 3:
-                if (give)
-                {
-                    _inventory.StoneAmount += amount;
-                    ReplaceSprite();
-                }
-                else
-                {
-                    if (_inventory.StoneAmount >= amount)
+                    else
                     {
-                        _inventory.StoneAmount -= amount;
-                        Destroy(gameObject);
+                        if (_inventory.WoodAmount >= amount)
+                        {
+                            _inventory.WoodAmount -= amount;
+                            Destroy(gameObject);
+                        }
                     }
-                }
-                break;
-            default:
-                break;
+                    break;
+                case 2:
+                    if (give)
+                    {
+                        _inventory.FishAmount += amount;
+                        ReplaceSprite();
+                    }
+                    else
+                    {
+                        if (_inventory.FishAmount >= amount)
+                        {
+                            _inventory.FishAmount -= amount;
+                            Destroy(gameObject);
+                        }
+                    }
+                    break;
+                case 3:
+                    if (give)
+                    {
+                        _inventory.StoneAmount += amount;
+                        ReplaceSprite();
+                    }
+                    else
+                    {
+                        if (_inventory.StoneAmount >= amount)
+                        {
+                            _inventory.StoneAmount -= amount;
+                            Destroy(gameObject);
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (isWorkstation)
+        {
+            if (!hasWorker)
+            {
+
+            }
         }
     }
 

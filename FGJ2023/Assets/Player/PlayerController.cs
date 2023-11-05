@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool isWalking;
     private bool lookLeft = false;
     private bool previousLookLeft = false;
+    private bool holdingDino = false;
 
     private IInteractable _interactable = null;
     private Animator animator;
@@ -88,7 +89,22 @@ public class PlayerController : MonoBehaviour
             {
                 if (other.gameObject.GetComponent<Interaction>().pickupable)
                 {
-                    other.gameObject.transform.SetParent(DinoHolder.gameObject.transform,false);
+                    if (!holdingDino)
+                    {
+                        other.gameObject.transform.SetParent(DinoHolder.gameObject.transform,false);
+                        holdingDino = true;
+                    }
+                }
+            }
+            if(other.gameObject.tag == "Workstation")
+            {
+                if (!other.gameObject.GetComponent<Interaction>().hasWorker)
+                {
+                    if (holdingDino)
+                    {
+                        GameObject Dino = DinoHolder.transform.GetChild(0).gameObject;
+                        Dino.gameObject.transform.SetParent(other.gameObject.transform,false);
+                    }
                 }
             }
         }

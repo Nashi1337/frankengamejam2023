@@ -100,9 +100,10 @@ GameObject:
   - component: {fileID: 850804540528927902}
   - component: {fileID: 3085285251271624940}
   - component: {fileID: 6734908793120020787}
+  - component: {fileID: 9172723509307773151}
   m_Layer: 0
   m_Name: WoodWorkstation
-  m_TagString: Interactable
+  m_TagString: Workstation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,6 +415,28 @@ PolygonCollider2D:
       - {x: 0.22278385, y: -0.5770951}
       - {x: 0.2694965, y: -0.5715995}
   m_UseDelaunayMesh: 0
+--- !u!114 &9172723509307773151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397304069862245706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7e757a5425d0644b235c2ad21de633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeechBubble: {fileID: 0}
+  itemSprite: {fileID: 0}
+  usedSprite: {fileID: 0}
+  _inventory: {fileID: 0}
+  give: 0
+  isWorkstation: 1
+  pickupable: 0
+  hasWorker: 0
+  type: 1
+  amount: 0
 --- !u!1 &3599474183049170456
 GameObject:
   m_ObjectHideFlags: 0
