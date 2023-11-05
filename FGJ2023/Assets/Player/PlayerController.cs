@@ -16,6 +16,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float sprintSpeed = 20f;
 
+    [SerializeField]
+    private Inventory _inventory;
+
+    public Inventory Inventory
+    {
+        get
+        {
+            return _inventory;
+        }
+    }
+
     private Rigidbody2D rigidbody;
     private Vector2 movementInput;
     private bool isWalking;
@@ -81,7 +92,7 @@ public class PlayerController : MonoBehaviour
         _interactables.RemoveWhere(interactable => (interactable as Component).IsDestroyed());
         foreach (IInteractable interactible in _interactables.ToList())
         {
-            interactible.Interact();
+            interactible.Interact(this);
         }
     }
 

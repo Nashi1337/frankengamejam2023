@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 172653058990912244}
   - component: {fileID: -1567705593462254865}
   - component: {fileID: 7712605139091030028}
+  - component: {fileID: 7489644325205360407}
   m_Layer: 0
-  m_Name: Tree3
+  m_Name: Stone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 614710407
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 449753671, guid: 70e67bacc9d4800499865eb055d278a9, type: 3}
+  m_Sprite: {fileID: 977660307, guid: 70e67bacc9d4800499865eb055d278a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -131,6 +132,41 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.24, y: 0.22}
-  m_Size: {x: 0.74, y: 0.44}
+  m_Offset: {x: 0.27, y: 0.21}
+  m_Size: {x: 0.83, y: 0.38}
+  m_Direction: 1
+--- !u!70 &7489644325205360407
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946733106611506631}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.35}
+  m_Size: {x: 1.4452779, y: 0.33}
   m_Direction: 1

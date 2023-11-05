@@ -12,8 +12,7 @@ public class Interaction : MonoBehaviour, IInteractable
     Sprite itemSprite;
     [SerializeField]
     Sprite usedSprite;
-    [SerializeField]
-    private Inventory _inventory;
+
     [SerializeField]
     bool give;
     [SerializeField]
@@ -28,8 +27,8 @@ public class Interaction : MonoBehaviour, IInteractable
     private void Awake()
     {
         amount = Random.Range(1, 5);
-        SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-        for (int i = 2; i < amount + 2 && i < spriteRenderers.Length; i++)
+        SpriteRenderer[] spriteRenderers = SpeechBubble.GetComponentsInChildren<SpriteRenderer>();
+        for (int i = 1; i < amount + 1 && i < spriteRenderers.Length; i++)
         {
             spriteRenderers[i].sprite = itemSprite;
         }
@@ -52,7 +51,7 @@ public class Interaction : MonoBehaviour, IInteractable
         }
     }
 
-    public void Interact()
+    public void Interact(PlayerController player)
     {
         //I hate dis, the type should be scriptable objects too.
         if (!isWorkstation)
@@ -62,14 +61,14 @@ public class Interaction : MonoBehaviour, IInteractable
                 case 0:
                     if (give)
                     {
-                        _inventory.BerryAmount += amount;
+                        player.Inventory.BerryAmount += amount;
                         ReplaceSprite();
                     }
                     else
                     {
-                        if (_inventory.BerryAmount >= amount)
+                        if (player.Inventory.BerryAmount >= amount)
                         {
-                            _inventory.BerryAmount -= amount;
+                            player.Inventory.BerryAmount -= amount;
                             PickUpDino();
                         }
                     }
@@ -77,14 +76,14 @@ public class Interaction : MonoBehaviour, IInteractable
                 case 1:
                     if (give)
                     {
-                        _inventory.WoodAmount += amount;
+                        player.Inventory.WoodAmount += amount;
                         ReplaceSprite();
                     }
                     else
                     {
-                        if (_inventory.WoodAmount >= amount)
+                        if (player.Inventory.WoodAmount >= amount)
                         {
-                            _inventory.WoodAmount -= amount;
+                            player.Inventory.WoodAmount -= amount;
                             Destroy(gameObject);
                         }
                     }
@@ -92,14 +91,14 @@ public class Interaction : MonoBehaviour, IInteractable
                 case 2:
                     if (give)
                     {
-                        _inventory.FishAmount += amount;
+                        player.Inventory.FishAmount += amount;
                         ReplaceSprite();
                     }
                     else
                     {
-                        if (_inventory.FishAmount >= amount)
+                        if (player.Inventory.FishAmount >= amount)
                         {
-                            _inventory.FishAmount -= amount;
+                            player.Inventory.FishAmount -= amount;
                             Destroy(gameObject);
                         }
                     }
@@ -107,14 +106,14 @@ public class Interaction : MonoBehaviour, IInteractable
                 case 3:
                     if (give)
                     {
-                        _inventory.StoneAmount += amount;
+                        player.Inventory.StoneAmount += amount;
                         ReplaceSprite();
                     }
                     else
                     {
-                        if (_inventory.StoneAmount >= amount)
+                        if (player.Inventory.StoneAmount >= amount)
                         {
-                            _inventory.StoneAmount -= amount;
+                            player.Inventory.StoneAmount -= amount;
                             Destroy(gameObject);
                         }
                     }

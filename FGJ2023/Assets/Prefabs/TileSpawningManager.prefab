@@ -48,10 +48,18 @@ MonoBehaviour:
   - {fileID: 4895388521364656534, guid: 4744c08f8d4e4b0409df6a1e4ccf67ae, type: 3}
   _weightedTiles:
   - Tile: {fileID: 5119574649647528517, guid: 5a596fb5673a3da409e79a1dfd2bb699, type: 3}
-    Weight: 1
+    Weight: 4
   - Tile: {fileID: 8175426959630102619, guid: a4331b1eeae392c4ca68fa203fd2d00d, type: 3}
+    Weight: 4
+  - Tile: {fileID: 8175426959630102619, guid: 5b356e6c2eeee13418699b426fb0f11f, type: 3}
     Weight: 1
-  - Tile: {fileID: 3397304069862245706, guid: b014def7fd96f8241971421fd6e74ab0, type: 3}
+  - Tile: {fileID: 5119574649647528517, guid: 8e0ff02e8736f474882e98315c280c07, type: 3}
+    Weight: 1
+  - Tile: {fileID: 5119574649647528517, guid: ac2e2e640604fa94198ea231b1d98adb, type: 3}
+    Weight: 1
+  - Tile: {fileID: 5119574649647528517, guid: aa03ed69020a135468d6ae47b4c7a035, type: 3}
+    Weight: 1
+  - Tile: {fileID: 5119574649647528517, guid: cdbf393ae1d538146b38f6bc7c3fa849, type: 3}
     Weight: 1
   _history: []
   _spacing: {x: 20, y: 20}

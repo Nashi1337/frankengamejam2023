@@ -175,46 +175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[2].Tile
-      value: 
-      objectReference: {fileID: 8175426959630102619, guid: 5b356e6c2eeee13418699b426fb0f11f, type: 3}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[3].Tile
-      value: 
-      objectReference: {fileID: 5119574649647528517, guid: 8e0ff02e8736f474882e98315c280c07, type: 3}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[4].Tile
-      value: 
-      objectReference: {fileID: 5119574649647528517, guid: ac2e2e640604fa94198ea231b1d98adb, type: 3}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[5].Tile
-      value: 
-      objectReference: {fileID: 5119574649647528517, guid: aa03ed69020a135468d6ae47b4c7a035, type: 3}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[6].Tile
-      value: 
-      objectReference: {fileID: 5119574649647528517, guid: cdbf393ae1d538146b38f6bc7c3fa849, type: 3}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[3].Weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[4].Weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[5].Weight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
-      propertyPath: _weightedTiles.Array.data[6].Weight
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1375,18 +1335,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6245538636459936075, guid: 92803d12079765d40bc25310359a0646, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6245538636459936075, guid: 92803d12079765d40bc25310359a0646, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6245538636459936075, guid: 92803d12079765d40bc25310359a0646, type: 3}
-      propertyPath: m_Offset.y
-      value: -1.25
-      objectReference: {fileID: 0}
     - target: {fileID: 7468746179549097750, guid: 92803d12079765d40bc25310359a0646, type: 3}
       propertyPath: orthographic size
       value: 15
@@ -1403,6 +1351,10 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8423122711292852410, guid: 92803d12079765d40bc25310359a0646, type: 3}
+      propertyPath: _inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
     - target: {fileID: 8423122711292852410, guid: 92803d12079765d40bc25310359a0646, type: 3}
       propertyPath: berryAmount
       value: 

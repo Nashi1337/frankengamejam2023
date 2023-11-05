@@ -18,16 +18,13 @@ public class BuyTileManager : MonoBehaviour, IInteractable
     private TileDirection _tileDirection;
 
     [SerializeField]
-    private Inventory _inventory;
-
-    [SerializeField]
     private Vector2Int _position;
 
-    public void Interact()
+    public void Interact(PlayerController player)
     {
         int cost = 1;
         TileSpawningManager instance = TileSpawningManager.Instance;
-        if(_inventory.TileTokenAmount >= cost)
+        if(player.Inventory.TileTokenAmount >= cost)
         {
             Vector2Int direction = Vector2Int.zero;
             switch(_tileDirection)
@@ -47,7 +44,7 @@ public class BuyTileManager : MonoBehaviour, IInteractable
             }
             if(instance.SpawnTile(_position + direction))
             {
-                _inventory.TileTokenAmount -= cost;
+                player.Inventory.TileTokenAmount -= cost;
             }
         }
     }

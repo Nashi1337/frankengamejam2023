@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ccb436b7045c25a43899a1d2081021d4, type: 3}
+    - target: {fileID: 2482085437385213827, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2482085437385213827, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2000784363
+      objectReference: {fileID: 0}
     - target: {fileID: 6469602133709060693, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1
@@ -23,14 +31,14 @@ PrefabInstance:
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _poiObject
       value: 
-      objectReference: {fileID: 1581549014077192442, guid: 93dc4fcd5822a604b9649cd5860120ec, type: 3}
+      objectReference: {fileID: 3397304069862245706, guid: 9c498fbb150d70544a1192c644bb6827, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _poiSpawns.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.data[0]
@@ -40,6 +48,10 @@ PrefabInstance:
       propertyPath: _decorations.Array.data[1]
       value: 
       objectReference: {fileID: 3946733106611506631, guid: f3d402ed6c9645f4fbd2ba8765226ed9, type: 3}
+    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      propertyPath: _decorations.Array.data[2]
+      value: 
+      objectReference: {fileID: 3946733106611506631, guid: 73a4adacd589fe341aba32842a74f7c7, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorationSpawnRate.m_Curve.Array.data[0].time
       value: 0
@@ -54,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7546318920146702809, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_Name
-      value: DinoTile3
+      value: BerryTile
       objectReference: {fileID: 0}
     - target: {fileID: 7784766878515503947, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -99,5 +111,26 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7546318920146702809, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5208254523394917334}
   m_SourcePrefab: {fileID: 100100000, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+--- !u!1 &5119574649647528517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7546318920146702809, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
+  m_PrefabInstance: {fileID: 3437806823824075676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5208254523394917334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5119574649647528517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36629a3b6088e044a98e4b1ff4bb74b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 0}
