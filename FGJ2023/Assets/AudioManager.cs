@@ -14,4 +14,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource grunt5;
     [SerializeField] AudioSource grunt6;
     [SerializeField] AudioSource dinoChewing;
+
+    public void DinoGrunt()
+    {
+
+    }
 }
