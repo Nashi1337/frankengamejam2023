@@ -115,7 +115,8 @@ public class PlayerController : MonoBehaviour
         // if we're not holding a dino, we just interact with the first thing in the list
         else
         {
-            _interactables.FirstOrDefault()?.Interact(this);
+            _interactables.OrderByDescending(interactable => interactable.InteractionPriority(this))
+                .FirstOrDefault()?.Interact(this);
         }
     }
 

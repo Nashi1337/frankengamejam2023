@@ -9,6 +9,12 @@ public class Workshop : MonoBehaviour, IInteractable
 
     [SerializeField]
     private bool _hasDino = false;
+
+    public int InteractionPriority(PlayerController player)
+    {
+        return 0;
+    }
+
     public bool DinoCanBePlaced => !_hasDino;
 
     [SerializeField]
@@ -25,7 +31,7 @@ public class Workshop : MonoBehaviour, IInteractable
 
     public void Interact(PlayerController player)
     {
-        throw new System.NotImplementedException();
+        throw new System.NotImplementedException("Not implemented here");
     }
 
     public void PlaceDino(PlayerController player)

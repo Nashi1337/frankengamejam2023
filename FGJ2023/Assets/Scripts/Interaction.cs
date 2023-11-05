@@ -20,6 +20,39 @@ public class Interaction : MonoBehaviour, IInteractable
     [SerializeField]
     private Vector2Int _range = new Vector2Int(1, 5);
 
+    public int InteractionPriority(PlayerController player)
+    {
+        //I hate dis, the type should be scriptable objects too.
+        switch (type)
+        {
+            case 0:
+                if(player.Inventory.BerryAmount + amount <= 10)
+                {
+                    return 30;
+                }
+                break;
+            case 1:
+                if (player.Inventory.WoodAmount + amount <= 10)
+                {
+                    return 30;
+                }
+                break;
+            case 2:
+                if (player.Inventory.FishAmount + amount <= 10)
+                {
+                    return 30;
+                }
+                break;
+            case 3:
+                if (player.Inventory.StoneAmount + amount <= 10)
+                {
+                    return 30;
+                }
+                break;
+        }
+        return 0;
+    }
+
     public bool DinoCanBePlaced => false;
 
     private void Awake()
@@ -84,8 +117,6 @@ public class Interaction : MonoBehaviour, IInteractable
                     player.Inventory.StoneAmount += amount;
                     ReplaceSprite();
                 }
-                break;
-            default:
                 break;
         }
     }

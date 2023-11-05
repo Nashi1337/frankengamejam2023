@@ -19,11 +19,23 @@ public class BuyTileManager : MonoBehaviour, IInteractable
     [SerializeField]
     private Vector2Int _position;
 
+    [SerializeField]
+    private int cost = 1;
+    
+    public int InteractionPriority(PlayerController player)
+    {
+        if (player.Inventory.TileTokenAmount >= cost)
+        {
+            return 10;
+        }
+
+        return 0;
+    }
+
     public bool DinoCanBePlaced => false;
 
     public void Interact(PlayerController player)
     {
-        int cost = 1;
         TileSpawningManager instance = TileSpawningManager.Instance;
         if(player.Inventory.TileTokenAmount >= cost)
         {

@@ -6,6 +6,8 @@ public interface IInteractable
 {
     void Interact(PlayerController player);
 
+    int InteractionPriority(PlayerController player);
+
     bool DinoCanBePlaced
     {
         get;
