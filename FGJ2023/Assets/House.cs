@@ -38,6 +38,24 @@ public class House : MonoBehaviour, IInteractable
         }
     }
 
+    public int InteractionPriority(PlayerController player)
+    {
+        int berryCost = _cost.Count(c => c == 0);
+        int woodCost = _cost.Count(c => c == 1);
+        int fishCost = _cost.Count(c => c == 2);
+        int stoneCost = _cost.Count(c => c == 3);
+
+        if (player.Inventory.BerryAmount >= berryCost &&
+            player.Inventory.WoodAmount >= woodCost &&
+            player.Inventory.FishAmount >= fishCost &&
+            player.Inventory.StoneAmount >= stoneCost)
+        {
+            return 40;
+        }
+
+        return 0;
+    }
+
     public bool DinoCanBePlaced => false;
 
     public void Interact(PlayerController player)
