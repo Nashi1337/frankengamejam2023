@@ -32,4 +32,9 @@ public class AudioManager : MonoBehaviour
             meow2.Play();
         }
     }
+
+    public void DinoChew()
+    {
+        dinoChewing.Play();
+    }
 }
