@@ -1821,7 +1821,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tileDirection: 1
-  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
   _position: {x: 0, y: 0}
 --- !u!1 &5385867491962378173
 GameObject:
@@ -2275,7 +2274,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tileDirection: 3
-  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
   _position: {x: 0, y: 0}
 --- !u!1 &6462589998381703147
 GameObject:
@@ -2585,7 +2583,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tileDirection: 2
-  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
   _position: {x: 0, y: 0}
 --- !u!1 &7389625991481707319
 GameObject:
@@ -2795,7 +2792,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.33610716, g: 0.7830189, b: 0.35278362, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2915,6 +2912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
+  _worldPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &7549331485450338106
 GameObject:
   m_ObjectHideFlags: 0
@@ -3285,7 +3283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tileDirection: 0
-  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
   _position: {x: 0, y: 0}
 --- !u!1 &8767886998101656868
 GameObject:

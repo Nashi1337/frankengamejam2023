@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 2482085437385213827, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ccb436b7045c25a43899a1d2081021d4, type: 3}
+      objectReference: {fileID: 21300000, guid: 401c0828cbc9d7b44a83a9a30d9064ec, type: 3}
     - target: {fileID: 2482085437385213827, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -43,14 +43,14 @@ PrefabInstance:
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _poiObject
       value: 
-      objectReference: {fileID: 3397304069862245706, guid: 9c498fbb150d70544a1192c644bb6827, type: 3}
+      objectReference: {fileID: 1581549014077192442, guid: ed1a293ad18b2f14dac11930d89fcbec, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _poiSpawns.Array.size
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.size
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.data[0]
@@ -60,26 +60,6 @@ PrefabInstance:
       propertyPath: _decorations.Array.data[1]
       value: 
       objectReference: {fileID: 3946733106611506631, guid: 14d1af6a5323eeb46ac20c804f562e9b, type: 3}
-    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
-      propertyPath: _decorations.Array.data[2]
-      value: 
-      objectReference: {fileID: 3946733106611506631, guid: dc667ff89639c0e458b87b2b69891c85, type: 3}
-    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
-      propertyPath: _decorations.Array.data[3]
-      value: 
-      objectReference: {fileID: 3946733106611506631, guid: 0c2b1f66b955611438c1dcc876fd176e, type: 3}
-    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
-      propertyPath: _decorations.Array.data[4]
-      value: 
-      objectReference: {fileID: 3946733106611506631, guid: 0267e8409db032e429a2d6cd797efd8d, type: 3}
-    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
-      propertyPath: _decorations.Array.data[5]
-      value: 
-      objectReference: {fileID: 3946733106611506631, guid: ca426dc8788be464cbfe317db2c61131, type: 3}
-    - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
-      propertyPath: _decorations.Array.data[6]
-      value: 
-      objectReference: {fileID: 3946733106611506631, guid: 49d8c893e48742d4fb1079c5084f3c4c, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorationSpawnRate.m_Curve.Array.data[0].time
       value: 0
@@ -94,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7546318920146702809, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_Name
-      value: BerryTile
+      value: DinoTile5
       objectReference: {fileID: 0}
     - target: {fileID: 7784766878515503947, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -142,14 +122,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7546318920146702809, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -5208254523394917334}
+      addedObject: {fileID: -7737865351221842382}
   m_SourcePrefab: {fileID: 100100000, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
 --- !u!1 &5119574649647528517 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7546318920146702809, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
   m_PrefabInstance: {fileID: 3437806823824075676}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-5208254523394917334
+--- !u!114 &-7737865351221842382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
