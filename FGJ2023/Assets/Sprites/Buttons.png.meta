@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0883b84988ecc3d4383d69bc0631de3e
+guid: da5268210ffaf2641b2ecf9048b4c424
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: play_exit_0
+      name: Buttons_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 78
-        width: 252
-        height: 198
+        x: 154
+        y: 1213
+        width: 1814
+        height: 786
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c70f76ade678118429c446e2d61dbebe
-      internalID: 1962984549
+      spriteID: f197f067301a13046913f7621c025786
+      internalID: -1266256561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: play_exit_1
+      name: Buttons_1
       rect:
         serializedVersion: 2
-        x: 294
-        y: 84
-        width: 187
-        height: 189
+        x: 239
+        y: 869
+        width: 1598
+        height: 308
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3837998c4e5bd748b6b218e31f10f28
-      internalID: -1201048100
+      spriteID: 86c67c3fccbbe8846995b1d9386b3f2a
+      internalID: -180744903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buttons_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 480
+        width: 1511
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2903db203aa1de4593a2215e65f62dd
+      internalID: 2070277533
       vertices: []
       indices: 
       edges: []
@@ -162,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      play_exit_0: 1962984549
-      play_exit_1: -1201048100
+      Buttons_0: -1266256561
+      Buttons_1: -180744903
+      Buttons_2: 2070277533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
