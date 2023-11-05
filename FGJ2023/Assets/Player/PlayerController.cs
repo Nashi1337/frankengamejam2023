@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
         if(interactable != null)
         {
             _interactable = interactable;
-            if (other.gameObject.tag == "Dino")
+            if (other.gameObject.CompareTag("Dino"))
             {
                 if (other.gameObject.GetComponent<Interaction>().pickupable)
                 {
@@ -96,14 +96,14 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
-            if(other.gameObject.tag == "Workstation")
+            if (other.gameObject.CompareTag("Workstation"))
             {
                 if (!other.gameObject.GetComponent<Interaction>().hasWorker)
                 {
-                    if (holdingDino)
+                    if (holdingDino && DinoHolder.transform.childCount > 0)
                     {
-                        GameObject Dino = DinoHolder.transform.GetChild(0).gameObject;
-                        Dino.gameObject.transform.SetParent(other.gameObject.transform,false);
+                        GameObject dino = DinoHolder.transform.GetChild(0).gameObject;
+                        dino.gameObject.transform.SetParent(other.gameObject.transform,false);
                     }
                 }
             }

@@ -28,28 +28,27 @@ public class Interaction : MonoBehaviour, IInteractable
     private void Awake()
     {
         amount = Random.Range(1, 5);
-        Debug.Log(amount);
         SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
-        for(int i = 2; i < amount+2; i++)
+        for (int i = 2; i < amount + 2 && i < spriteRenderers.Length; i++)
         {
             spriteRenderers[i].sprite = itemSprite;
         }
-        ToggleInteractivity();
+        SetInteractivity(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            ToggleInteractivity();
+            SetInteractivity(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            ToggleInteractivity();
+            SetInteractivity(false);
         }
     }
 
@@ -133,9 +132,12 @@ public class Interaction : MonoBehaviour, IInteractable
         }
     }
 
-    public void ToggleInteractivity()
+    public void SetInteractivity(bool value)
     {
-        SpeechBubble.SetActive(!SpeechBubble.activeSelf);
+        if (SpeechBubble != null)
+        {
+            SpeechBubble.SetActive(value);
+        }
     }
 
     public void ReplaceSprite()
@@ -143,7 +145,7 @@ public class Interaction : MonoBehaviour, IInteractable
         gameObject.GetComponent<SpriteRenderer>().sprite = usedSprite;
         Destroy(gameObject.GetComponent<PolygonCollider2D>());
         gameObject.AddComponent<PolygonCollider2D>();
-        ToggleInteractivity();
+        SetInteractivity(false);
         Destroy(this);
     }
 
