@@ -43,11 +43,11 @@ PrefabInstance:
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.data[0]
       value: 
-      objectReference: {fileID: 3946733106611506631, guid: 14d1af6a5323eeb46ac20c804f562e9b, type: 3}
+      objectReference: {fileID: 3946733106611506631, guid: cd60cc6e17d31bf4398fdb04114e2b60, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.data[1]
       value: 
-      objectReference: {fileID: 3946733106611506631, guid: f3d402ed6c9645f4fbd2ba8765226ed9, type: 3}
+      objectReference: {fileID: 3946733106611506631, guid: 14d1af6a5323eeb46ac20c804f562e9b, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorationSpawnRate.m_Curve.Array.data[0].time
       value: 0

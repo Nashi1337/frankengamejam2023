@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3470643444330361040}
   - component: {fileID: 850804540528927902}
   - component: {fileID: 3085285251271624940}
-  - component: {fileID: 9172723509307773151}
   - component: {fileID: -4822780741144813633}
   - component: {fileID: 5482810179530754482}
   - component: {fileID: 7608216760872908242}
+  - component: {fileID: -1383636279231531658}
   m_Layer: 0
   m_Name: WoodWorkstation
   m_TagString: Workstation
@@ -125,27 +125,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 1}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &9172723509307773151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3397304069862245706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e7e757a5425d0644b235c2ad21de633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeechBubble: {fileID: 6029011522203101519}
-  itemSprite: {fileID: 0}
-  usedSprite: {fileID: 0}
-  give: 0
-  isWorkstation: 1
-  pickupable: 0
-  hasWorker: 0
-  type: 1
-  amount: 0
 --- !u!114 &-4822780741144813633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +209,24 @@ CapsuleCollider2D:
   m_Offset: {x: -0.45, y: 0.49}
   m_Size: {x: 0.21, y: 0.0001}
   m_Direction: 0
+--- !u!114 &-1383636279231531658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3397304069862245706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b90823eb93752fb47b919289ea89e6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeechBubble: {fileID: 0}
+  _hasDino: 0
+  _resourceType: 0
+  _timeBetweenResource: 0
+  _timeToNextResource: 0
+  _inventory: {fileID: 0}
 --- !u!1001 &6958696945533740827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -294,10 +291,5 @@ PrefabInstance:
 --- !u!4 &3681128476576690314 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6018987063990278033, guid: 50602f5fcc3dc6249ab96abcf376b2ae, type: 3}
-  m_PrefabInstance: {fileID: 6958696945533740827}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6029011522203101519 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3691007799183363668, guid: 50602f5fcc3dc6249ab96abcf376b2ae, type: 3}
   m_PrefabInstance: {fileID: 6958696945533740827}
   m_PrefabAsset: {fileID: 0}

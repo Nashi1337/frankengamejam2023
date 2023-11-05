@@ -26,12 +26,12 @@ PrefabInstance:
       objectReference: {fileID: 3397304069862245706, guid: b014def7fd96f8241971421fd6e74ab0, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.data[0]
       value: 
-      objectReference: {fileID: 3946733106611506631, guid: 14d1af6a5323eeb46ac20c804f562e9b, type: 3}
+      objectReference: {fileID: 3946733106611506631, guid: cd60cc6e17d31bf4398fdb04114e2b60, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _decorations.Array.data[1]
       value: 
@@ -126,3 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
+  _worldPosition: {x: 0, y: 0, z: 0}
