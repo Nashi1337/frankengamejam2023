@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Inventory _inventory;
 
+    [SerializeField]
+    private AudioManager audioManager;
+
     public Inventory Inventory
     {
         get
@@ -105,6 +108,7 @@ public class PlayerController : MonoBehaviour
         if (_heldDino != null && dinoInteractable != null)
         {
             dinoInteractable.PlaceDino(this);
+            _interactables.Remove(dinoInteractable);
             _heldDino = null;
         }
         // if we're not holding a dino, we just interact with the first thing in the list
@@ -116,6 +120,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "Dino")
+        {
+            audioManager.DinoGrunt();
+        }
+        else if (other.gameObject.tag == "Cat")
+        {
+            audioManager.CatMeow();
+        }
         IInteractable interactable = other.GetComponent<IInteractable>();
         if (interactable != null)
         {

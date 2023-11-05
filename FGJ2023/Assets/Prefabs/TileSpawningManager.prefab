@@ -46,6 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startTiles:
   - {fileID: 4895388521364656534, guid: 4744c08f8d4e4b0409df6a1e4ccf67ae, type: 3}
+  - {fileID: 8040086802619677313, guid: 26ecdf63df971974dbce523718c07731, type: 3}
+  - {fileID: 4864841058439581035, guid: cbd31204954fc08429f10771a23caea2, type: 3}
+  - {fileID: 3654908221727102990, guid: f9ee7d56e887cd5459f5f8f620c522ad, type: 3}
+  - {fileID: 552979353331803680, guid: 2e9108f4eaf12e54fbf422dff27d52af, type: 3}
+  - {fileID: 5013689244597057382, guid: e5349d2a418a67c4b8456865d15056b3, type: 3}
+  - {fileID: 552979353331803680, guid: d0e74929cba8b584baa80fb0abfb3e68, type: 3}
   _weightedTiles:
   - Tile: {fileID: 5119574649647528517, guid: 5a596fb5673a3da409e79a1dfd2bb699, type: 3}
     Weight: 6
