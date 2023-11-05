@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _poiObject
       value: 
-      objectReference: {fileID: 1581549014077192442, guid: 47b6354b81386ac40b2b86d49ca2e71e, type: 3}
+      objectReference: {fileID: 1581549014077192442, guid: 59ecf53e59ebf964d9f4b4b42b847e03, type: 3}
     - target: {fileID: 7172246276551823929, guid: 79885ca5b6a246f43a3419db19fa455b, type: 3}
       propertyPath: _poiSpawns.Array.size
       value: 4
@@ -130,3 +130,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
+  _worldPosition: {x: 0, y: 0, z: 0}

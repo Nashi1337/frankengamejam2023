@@ -78,7 +78,6 @@ public class TileManager : MonoBehaviour
                 break;
             }
 
-            Debug.Log($"Trying to spawn decoration {randomDecoration} at spawn point {randomPoint}");
             Instantiate(_decorations[randomDecoration], spawnList[randomPoint].transform.position, Quaternion.identity, transform);
             spawnList.RemoveAt(randomPoint);
         }

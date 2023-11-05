@@ -176,6 +176,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
+      propertyPath: _startTiles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
+      propertyPath: _startTiles.Array.data[1]
+      value: 
+      objectReference: {fileID: 5119574649647528517, guid: 8e0ff02e8736f474882e98315c280c07, type: 3}
+    - target: {fileID: 8287271893952338861, guid: 49c1bfdefd63aed4ab217013e95111ba, type: 3}
       propertyPath: _weightedTiles.Array.size
       value: 8
       objectReference: {fileID: 0}

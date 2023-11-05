@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private bool isWalking;
     private bool lookLeft = false;
     private bool previousLookLeft = false;
+    [SerializeField]
     private bool holdingDino = false;
 
     private HashSet<IInteractable> _interactables = new HashSet<IInteractable>();
@@ -89,15 +90,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnAction(InputValue inputValue)
     {
-        //While holding a dino, no interaction with other things possible
-        if(holdingDino)
-        {
-            return;
-        }
         _interactables.RemoveWhere(interactable => (interactable as Component).IsDestroyed());
-        foreach (IInteractable interactible in _interactables.ToList())
+        IInteractable dinoInteractable = _interactables.FirstOrDefault(i => i.DinoCanBePlaced);
+        //If we hold a dino and are at a workstation that can have a dino, we place the dino
+        if (holdingDino && dinoInteractable != null)
         {
-            interactible.Interact(this);
+            dinoInteractable.PlaceDino();
+        }
+        // if we're not holding a dino, we just interact with the first thing in the list
+        else
+        {
+            _interactables.FirstOrDefault()?.Interact(this);
         }
     }
 
@@ -107,28 +110,6 @@ public class PlayerController : MonoBehaviour
         if (interactable != null)
         {
             _interactables.Add(interactable);
-            if (other.gameObject.CompareTag("Dino"))
-            {
-                if (other.gameObject.GetComponent<Interaction>().pickupable)
-                {
-                    if (!holdingDino)
-                    {
-                        other.gameObject.transform.SetParent(DinoHolder.gameObject.transform,false);
-                        holdingDino = true;
-                    }
-                }
-            }
-            if (other.gameObject.CompareTag("Workstation"))
-            {
-                if (!other.gameObject.GetComponent<Interaction>().hasWorker)
-                {
-                    if (holdingDino && DinoHolder.transform.childCount > 0)
-                    {
-                        GameObject dino = DinoHolder.transform.GetChild(0).gameObject;
-                        dino.gameObject.transform.SetParent(other.gameObject.transform,false);
-                    }
-                }
-            }
         }
     }
 
@@ -157,5 +138,16 @@ public class PlayerController : MonoBehaviour
         {
             _interactables.Remove(interactable);
         }
+    }
+
+    public bool TakeDino(Dino dino)
+    {
+        if(holdingDino)
+        {
+            return false;
+        }
+        dino.gameObject.transform.SetParent(DinoHolder.gameObject.transform, false);
+        holdingDino = true;
+        return true;
     }
 }

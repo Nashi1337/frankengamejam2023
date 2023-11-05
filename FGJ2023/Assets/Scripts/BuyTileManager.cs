@@ -20,6 +20,8 @@ public class BuyTileManager : MonoBehaviour, IInteractable
     [SerializeField]
     private Vector2Int _position;
 
+    public bool DinoCanBePlaced => false;
+
     public void Interact(PlayerController player)
     {
         int cost = 1;
@@ -47,6 +49,11 @@ public class BuyTileManager : MonoBehaviour, IInteractable
                 player.Inventory.TileTokenAmount -= cost;
             }
         }
+    }
+
+    public void PlaceDino()
+    {
+        throw new NotImplementedException();
     }
 
     internal void SetUp(Vector2Int position)

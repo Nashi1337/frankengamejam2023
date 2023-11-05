@@ -17,12 +17,13 @@ public class Interaction : MonoBehaviour, IInteractable
     bool give;
     [SerializeField]
     bool isWorkstation;
-    public bool pickupable;
     public bool hasWorker;
     //0=berry, 1=wood, 2=fish, 3=stone
     [SerializeField]
     public int type;
     public int amount;
+
+    public bool DinoCanBePlaced => false;
 
     private void Awake()
     {
@@ -63,14 +64,6 @@ public class Interaction : MonoBehaviour, IInteractable
                     {
                         player.Inventory.BerryAmount += amount;
                         ReplaceSprite();
-                    }
-                    else
-                    {
-                        if (player.Inventory.BerryAmount >= amount)
-                        {
-                            player.Inventory.BerryAmount -= amount;
-                            PickUpDino();
-                        }
                     }
                     break;
                 case 1:
@@ -148,8 +141,8 @@ public class Interaction : MonoBehaviour, IInteractable
         Destroy(this);
     }
 
-    public void PickUpDino()
+    public void PlaceDino()
     {
-        pickupable = true;
+        throw new System.NotImplementedException();
     }
 }

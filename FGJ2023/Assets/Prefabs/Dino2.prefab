@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7857876024002896661}
   - component: {fileID: 7521738451368724443}
+  - component: {fileID: 8302291156390216257}
   - component: {fileID: 934962604043511241}
   - component: {fileID: 1800820517891523683}
-  - component: {fileID: 625137410377933848}
   - component: {fileID: 6277568685178913429}
   - component: {fileID: 5948765056994820}
   m_Layer: 0
@@ -90,6 +90,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8302291156390216257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581549014077192442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd190295204e4743b090ef776a35fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeechBubble: {fileID: 2080679167099790538}
+  itemSprite:
+  - {fileID: 119753323, guid: 4d8e2ef756c5f1f43871897d4a0ae5df, type: 3}
+  - {fileID: 99970730, guid: 3842cf93cdea7404d8d86b610883c34e, type: 3}
+  - {fileID: -1831123765, guid: 3842cf93cdea7404d8d86b610883c34e, type: 3}
+  - {fileID: -562560004, guid: 3842cf93cdea7404d8d86b610883c34e, type: 3}
+  _cost: 
+  _costProbability:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 5
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!58 &934962604043511241
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -160,28 +203,6 @@ CircleCollider2D:
   m_Offset: {x: -0.00000047683716, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
---- !u!114 &625137410377933848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581549014077192442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e7e757a5425d0644b235c2ad21de633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeechBubble: {fileID: 2080679167099790538}
-  itemSprite: {fileID: 119753323, guid: 4d8e2ef756c5f1f43871897d4a0ae5df, type: 3}
-  usedSprite: {fileID: 0}
-  _inventory: {fileID: 11400000, guid: 3617729434168c640b7472626488bfe3, type: 2}
-  give: 0
-  isWorkstation: 0
-  pickupable: 0
-  hasWorker: 0
-  type: 0
-  amount: 0
 --- !u!95 &6277568685178913429
 Animator:
   serializedVersion: 5
@@ -216,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 0}
+  _worldPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &3447811884081523358
 PrefabInstance:
   m_ObjectHideFlags: 0
