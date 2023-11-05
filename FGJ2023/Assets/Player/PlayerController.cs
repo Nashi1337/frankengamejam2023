@@ -17,14 +17,18 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Vector2 movementInput;
     private bool isWalking;
+    private bool lookLeft = false;
+    private bool previousLookLeft = false;
 
     private IInteractable _interactable = null;
     private Animator animator;
+    private GameObject DinoHolder;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        DinoHolder = gameObject.transform.Find("DinoHolder").gameObject;
     }
 
     private void FixedUpdate()
@@ -35,6 +39,28 @@ public class PlayerController : MonoBehaviour
         float animationSpeed = speed / walkSpeed;
         animator.SetFloat("movementX", vertical ? 0f : movementInput.x * animationSpeed);
         animator.SetFloat("movementY", movementInput.y * animationSpeed);
+        if (movementInput.x < 0f)
+        {
+            lookLeft = true;
+        }
+        else if (movementInput.x > 0f)
+        {
+            lookLeft = false;
+        }
+        if (lookLeft != previousLookLeft)
+        {
+            if (lookLeft)
+            {
+                DinoHolder.transform.localPosition = new Vector3(-DinoHolder.transform.localPosition.x, DinoHolder.transform.localPosition.y, DinoHolder.transform.localPosition.z);
+
+            }
+            else
+            {
+                DinoHolder.transform.localPosition = new Vector3(Mathf.Abs(DinoHolder.transform.localPosition.x), DinoHolder.transform.localPosition.y, DinoHolder.transform.localPosition.z);
+
+            }
+            previousLookLeft = lookLeft;
+        }
     }
 
     private void OnMove(InputValue inputValue)
@@ -52,44 +78,19 @@ public class PlayerController : MonoBehaviour
         _interactable?.Interact();
     }
 
-    //private void Update()
-    //{
-    //    if (canInteract && Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        Interaction interactable = Interactable.GetComponent<Interaction>();
-    //        int itemType = interactable.type;
-    //        int itemAmount = interactable.amount;
-    //        Debug.Log(itemType + " " + itemAmount);
-    //        if (interactable.give)
-    //        {
-    //            inventory[itemType] += itemAmount;
-    //            Destroy(Interactable);
-    //        }
-    //        else
-    //        {
-    //            if (inventory[itemType] >= interactable.amount)
-    //            {
-    //                inventory[itemType] -= interactable.amount;
-    //                interactable.ToggleInteractivity();
-    //            }
-    //            else
-    //            {
-    //                Debug.Log("Not enough items");
-    //            }
-    //        }
-
-    //        berryAmount.GetComponent<TextMeshProUGUI>().text = inventory[itemType].ToString();
-
- 
-    //    }
-    //}
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         IInteractable interactable = other.GetComponent<IInteractable>();
         if(interactable != null)
         {
             _interactable = interactable;
+            if (other.gameObject.tag == "Dino")
+            {
+                if (other.gameObject.GetComponent<Interaction>().pickupable)
+                {
+                    other.gameObject.transform.SetParent(DinoHolder.gameObject.transform,false);
+                }
+            }
         }
     }
 

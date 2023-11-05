@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tile
   - Interactable
+  - Dino
   layers:
   - Default
   - TransparentFX

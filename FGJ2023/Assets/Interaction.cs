@@ -16,6 +16,7 @@ public class Interaction : MonoBehaviour, IInteractable
     private Inventory _inventory;
     [SerializeField]
     bool give;
+    public bool pickupable;
     //0=berry, 1=wood, 2=fish, 3=stone
     [SerializeField]
     public int type;
@@ -65,7 +66,7 @@ public class Interaction : MonoBehaviour, IInteractable
                     if (_inventory.BerryAmount >= amount)
                     {
                         _inventory.BerryAmount -= amount;
-                        Destroy(gameObject);
+                        PickUpDino();
                     }
                 }
                 break;
@@ -131,5 +132,10 @@ public class Interaction : MonoBehaviour, IInteractable
         gameObject.AddComponent<PolygonCollider2D>();
         ToggleInteractivity();
         Destroy(this);
+    }
+
+    public void PickUpDino()
+    {
+        pickupable = true;
     }
 }

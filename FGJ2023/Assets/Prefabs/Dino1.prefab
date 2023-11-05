@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 6277568685178913429}
   m_Layer: 0
   m_Name: Dino1
-  m_TagString: Interactable
+  m_TagString: Dino
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
