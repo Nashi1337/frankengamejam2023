@@ -19,6 +19,24 @@ public class House : MonoBehaviour, IInteractable
 
     [SerializeField]
     Sprite[] houseUpgrades;
+    int houseIndex = 1;
+
+    float timeBetweenToken=5;
+    float timeToNextToken = 0;
+    int tokenReady = 0;
+
+    private void Update()
+    {
+        if (houseIndex == 3)
+        {
+            timeToNextToken -= Time.deltaTime;
+            if(timeToNextToken < 0)
+            {
+                timeToNextToken = timeBetweenToken;
+                tokenReady += 1;
+            }
+        }
+    }
 
     public bool DinoCanBePlaced => false;
 
@@ -39,8 +57,35 @@ public class House : MonoBehaviour, IInteractable
             player.Inventory.FishAmount -= fishCost;
             player.Inventory.StoneAmount -= stoneCost;
             //TODO: find house upgrade SFX
-/*            AudioManager instance = AudioManager.Instance;
-            instance.DinoChew();*/
+            /*            AudioManager instance = AudioManager.Instance;
+                        instance.DinoChew();*/
+            if(houseIndex < 3)
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = houseUpgrades[houseIndex++];
+
+                _cost.Clear();
+
+                for (int i = 0; i < 4; i++)
+                {
+                    if (Random.value <= _costProbability.Evaluate((float)i))
+                    {
+                        _cost.Add(Random.Range(0, 4));
+                    }
+                }
+
+                SpriteRenderer[] spriteRenderers = SpeechBubble.GetComponentsInChildren<SpriteRenderer>();
+                for (int i = 1; i < _cost.Count + 1 && i < spriteRenderers.Length; i++)
+                {
+                    spriteRenderers[i].sprite = itemSprite[_cost[i - 1]];
+                }
+
+                player.Inventory.TileTokenAmount += houseIndex;
+            }
+        }
+        if(houseIndex == 3)
+        {
+            player.Inventory.TileTokenAmount += tokenReady;
+            tokenReady = 0;
         }
     }
 
@@ -59,7 +104,6 @@ public class House : MonoBehaviour, IInteractable
         {
             spriteRenderers[i].sprite = itemSprite[_cost[i - 1]];
         }
-        SetInteractivity(false);
         SetInteractivity(false);
     }
 

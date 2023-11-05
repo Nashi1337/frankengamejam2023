@@ -1,4 +1,3 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -25,13 +24,16 @@ public class Interaction : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        amount = Random.Range(_range.x, _range.y);
-        SpriteRenderer[] spriteRenderers = SpeechBubble.GetComponentsInChildren<SpriteRenderer>();
-        for (int i = 1; i < amount + 1 && i < spriteRenderers.Length; i++)
+        if (gameObject.tag != "Cat")
         {
-            spriteRenderers[i].sprite = itemSprite;
+            amount = Random.Range(_range.x, _range.y);
+            SpriteRenderer[] spriteRenderers = SpeechBubble.GetComponentsInChildren<SpriteRenderer>();
+            for (int i = 1; i < amount + 1 && i < spriteRenderers.Length; i++)
+            {
+                spriteRenderers[i].sprite = itemSprite;
+            }
+            SetInteractivity(false);
         }
-        SetInteractivity(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
