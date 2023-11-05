@@ -35,6 +35,8 @@ public class Dino : MonoBehaviour, IInteractable
             player.Inventory.WoodAmount -= woodCost;
             player.Inventory.FishAmount -= fishCost;
             player.Inventory.StoneAmount -= stoneCost;
+            AudioManager instance = AudioManager.Instance;
+            instance.DinoChew();
             player.TakeDino(this);
         }
     }

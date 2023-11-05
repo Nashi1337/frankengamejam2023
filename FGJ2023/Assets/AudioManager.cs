@@ -15,6 +15,37 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource grunt6;
     [SerializeField] AudioSource dinoChewing;
 
+    private static AudioManager _instance = null;
+
+    public static AudioManager Instance
+    {
+        get
+        {
+            return _instance;
+        }
+    }
+
+    private void Awake()
+    {
+        SetupSingleton();
+    }
+
+    /// <summary>
+    /// Destroys this TileSpawningManger if there is already one registered.
+    /// If not, this TileSpawningManger becomes the globally available instance.
+    /// </summary>
+    private void SetupSingleton()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void DinoGrunt()
     {
         grunt6.Play();
