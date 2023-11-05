@@ -13,11 +13,6 @@ public class Interaction : MonoBehaviour, IInteractable
     [SerializeField]
     Sprite usedSprite;
 
-    [SerializeField]
-    bool give;
-    [SerializeField]
-    bool isWorkstation;
-    public bool hasWorker;
     //0=berry, 1=wood, 2=fish, 3=stone
     [SerializeField]
     public int type;
@@ -55,72 +50,38 @@ public class Interaction : MonoBehaviour, IInteractable
     public void Interact(PlayerController player)
     {
         //I hate dis, the type should be scriptable objects too.
-        if (!isWorkstation)
+        switch (type)
         {
-            switch (type)
-            {
-                case 0:
-                    if (give)
-                    {
-                        player.Inventory.BerryAmount += amount;
-                        ReplaceSprite();
-                    }
-                    break;
-                case 1:
-                    if (give)
-                    {
-                        player.Inventory.WoodAmount += amount;
-                        ReplaceSprite();
-                    }
-                    else
-                    {
-                        if (player.Inventory.WoodAmount >= amount)
-                        {
-                            player.Inventory.WoodAmount -= amount;
-                            Destroy(gameObject);
-                        }
-                    }
-                    break;
-                case 2:
-                    if (give)
-                    {
-                        player.Inventory.FishAmount += amount;
-                        ReplaceSprite();
-                    }
-                    else
-                    {
-                        if (player.Inventory.FishAmount >= amount)
-                        {
-                            player.Inventory.FishAmount -= amount;
-                            Destroy(gameObject);
-                        }
-                    }
-                    break;
-                case 3:
-                    if (give)
-                    {
-                        player.Inventory.StoneAmount += amount;
-                        ReplaceSprite();
-                    }
-                    else
-                    {
-                        if (player.Inventory.StoneAmount >= amount)
-                        {
-                            player.Inventory.StoneAmount -= amount;
-                            Destroy(gameObject);
-                        }
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
-        else if (isWorkstation)
-        {
-            if (!hasWorker)
-            {
-
-            }
+            case 0:
+                if(player.Inventory.BerryAmount + amount <= 10)
+                {
+                    player.Inventory.BerryAmount += amount;
+                    ReplaceSprite();
+                }
+                break;
+            case 1:
+                if (player.Inventory.WoodAmount + amount <= 10)
+                {
+                    player.Inventory.WoodAmount += amount;
+                    ReplaceSprite();
+                }
+                break;
+            case 2:
+                if (player.Inventory.FishAmount + amount <= 10)
+                {
+                    player.Inventory.FishAmount += amount;
+                    ReplaceSprite();
+                }
+                break;
+            case 3:
+                if (player.Inventory.StoneAmount + amount <= 10)
+                {
+                    player.Inventory.StoneAmount += amount;
+                    ReplaceSprite();
+                }
+                break;
+            default:
+                break;
         }
     }
 

@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - Dino
   - Workstation
+  - arrow
   layers:
   - Default
   - TransparentFX
