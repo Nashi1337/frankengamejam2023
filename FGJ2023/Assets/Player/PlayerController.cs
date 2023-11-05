@@ -2,7 +2,9 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private bool previousLookLeft = false;
     private bool holdingDino = false;
 
-    private IInteractable _interactable = null;
+    private HashSet<IInteractable> _interactables = new HashSet<IInteractable>();
     private Animator animator;
     private GameObject DinoHolder;
 
@@ -76,15 +78,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnAction(InputValue inputValue)
     {
-        _interactable?.Interact();
+        _interactables.RemoveWhere(interactable => (interactable as Component).IsDestroyed());
+        foreach (IInteractable interactible in _interactables.ToList())
+        {
+            interactible.Interact();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         IInteractable interactable = other.GetComponent<IInteractable>();
-        if(interactable != null)
+        if (interactable != null)
         {
-            _interactable = interactable;
+            _interactables.Add(interactable);
             if (other.gameObject.CompareTag("Dino"))
             {
                 if (other.gameObject.GetComponent<Interaction>().pickupable)
@@ -112,16 +118,28 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        _interactable = collision.collider.GetComponent<IInteractable>();
+        IInteractable interactable = collision.collider.GetComponent<IInteractable>();
+        if (interactable != null)
+        {
+            _interactables.Add(interactable);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        _interactable = null;
+        IInteractable interactable = collision.collider.GetComponent<IInteractable>();
+        if (interactable != null)
+        {
+            _interactables.Remove(interactable);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        _interactable = null;
+        IInteractable interactable = other.GetComponent<IInteractable>();
+        if (interactable != null)
+        {
+            _interactables.Remove(interactable);
+        }
     }
 }
