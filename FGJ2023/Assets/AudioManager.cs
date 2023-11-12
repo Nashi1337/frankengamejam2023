@@ -48,12 +48,36 @@ public class AudioManager : MonoBehaviour
 
     public void DinoGrunt()
     {
-        grunt6.Play();
+        int randomValue = Random.Range(0, 7);
+        switch (randomValue)
+        {
+            case 0:
+                grunt.Play();
+                break;
+            case 1:
+                grunt2.Play();
+                break;
+            case 2: 
+                grunt3.Play();
+                break; 
+            case 3: 
+                grunt4.Play();
+                break;
+            case 4: 
+                grunt5.Play();
+                break;
+            case 5: 
+                grunt6.Play();
+                break;
+            default:
+                break;
+        }
+
     }
 
     public void CatMeow()
     {
-        int randomValue = Random.Range(0, 2); // Generates either 0 or 1
+        int randomValue = Random.Range(0, 2);
         if (randomValue == 0)
         {
             meow.Play();
