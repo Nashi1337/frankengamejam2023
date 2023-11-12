@@ -10,8 +10,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1581549014077192442, guid: 59ecf53e59ebf964d9f4b4b42b847e03, type: 3}
       propertyPath: m_Name
-      value: Dino Start
+      value: Dino1 Start
       objectReference: {fileID: 0}
+    - target: {fileID: 6277568685178913429, guid: 59ecf53e59ebf964d9f4b4b42b847e03, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0aae8297e5225624da006faacaa94084, type: 2}
     - target: {fileID: 7857876024002896661, guid: 59ecf53e59ebf964d9f4b4b42b847e03, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

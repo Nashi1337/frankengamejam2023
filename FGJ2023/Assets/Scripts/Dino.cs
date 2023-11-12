@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class Dino : MonoBehaviour, IInteractable
@@ -17,9 +16,6 @@ public class Dino : MonoBehaviour, IInteractable
 
     [SerializeField]
     private AnimationCurve _costProbability;
-
-    [SerializeField]
-    private AnimatorController topHatAnimator;
 
     public int InteractionPriority(PlayerController player)
     {
@@ -59,7 +55,7 @@ public class Dino : MonoBehaviour, IInteractable
             player.Inventory.StoneAmount -= stoneCost;
             AudioManager instance = AudioManager.Instance;
             instance.DinoChew();
-            GetComponent<Animator>().runtimeAnimatorController = topHatAnimator;
+            GetComponent<Animator>().SetBool("topHat", true);
             player.TakeDino(this);
         }
     }

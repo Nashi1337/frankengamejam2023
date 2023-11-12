@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: _costProbability.m_Curve.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6277568685178913429, guid: de83bd56fef8f2a44a4e75dd9ae2e43c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 441e3dcc05aed7145a7a5bcaa1b4735f, type: 2}
     - target: {fileID: 7857876024002896661, guid: de83bd56fef8f2a44a4e75dd9ae2e43c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
